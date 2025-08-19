@@ -18,4 +18,4 @@ At the core of this monorepo is the **PatternBook**:
 
 Think of PatternBook as a **recipe book**: solutions are written once, documented clearly, and reused everywhere.
 
-👉 See [PatternBook documentation](./packages/patternbook/README.md) for details.
+👉 See [PatternBook documentation](./src/packages/patternbook/README.md) for details.

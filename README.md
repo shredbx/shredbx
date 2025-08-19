@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo.png" alt="PatternBook Logo" width="256"/>
+</p>
+
 # ShredBX Monorepo
 
 This repository is the **workspace for ShredBX experiments and development**.  

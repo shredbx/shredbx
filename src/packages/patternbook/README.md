@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo.png" alt="PatternBook Logo" width="200"/>
+</p>
+
 # PatternBook
 
 ## What & Why

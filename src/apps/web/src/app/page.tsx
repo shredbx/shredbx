@@ -1,59 +1,43 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { track } from "@vercel/analytics";
-
-// Single source of truth for timeout (in milliseconds)
-const REDIRECT_TIMEOUT = 5000;
+import { IconBrandGithub } from "@tabler/icons-react";
+import Link from "next/link";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
-  const [countdown, setCountdown] = useState(
-    Math.ceil(REDIRECT_TIMEOUT / 1000)
-  );
-
-  useEffect(() => {
-    // Track the visit
-    track("page_visit", { page: "home" });
-
-    // Countdown timer that updates every second
-    const countdownInterval = setInterval(() => {
-      setCountdown((prev) => {
-        const newCount = prev - 1;
-        return newCount > 0 ? newCount : 0;
-      });
-    }, 1000);
-
-    // Redirect to GitHub profile after the configured timeout
-    const redirectTimer = setTimeout(() => {
-      window.location.href = "https://github.com/shredbx";
-    }, REDIRECT_TIMEOUT);
-
-    return () => {
-      clearInterval(countdownInterval);
-      clearTimeout(redirectTimer);
-    };
-  }, []);
-
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
-      <div className="text-center space-y-4">
+    <main className="min-h-screen flex flex-col items-center justify-start p-12 bg-background text-foreground">
+      <div className="absolute top-4 right-4">
+        <ThemeSwitcher />
+      </div>
+      <div className="text-center space-y-12">
         <div className="flex justify-center">
           <Image
             src="/logo-animated-8.gif"
             alt="ShredBX Logo"
-            width={96}
-            height={96}
+            width={48}
+            height={48}
             priority
-            className="w-64 h-64 bg-dark rounded-md"
+            className="w-48 h-48 bg-dark rounded-md"
           />
         </div>
-        <h1 className="text-4xl font-bold -mt-2">shredbx</h1>
-        <p className="text-xl text-muted-foreground">eXperimental lab</p>
-        <p className="text-muted-foreground/70">
-          Redirecting to GitHub profile in {countdown}s...
-        </p>
-        <div className="mt-2 animate-spin rounded-full h-8 w-8 border-b-2 border-border mx-auto"></div>
+        <div className="flex flex-col space-y-2">
+          <h1 className="text-4xl font-bold ">shredbx - eXperimental lab</h1>
+          <p className="text-xl text-muted-foreground">coming soon...</p>
+        </div>
+        <div className="flex flex-col space-y-2">
+          <p>This project is open source. Check out the code on:</p>
+          <Link
+            href="https://github.com/shredbx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <div className="flex flex-row space-x-2 justify-center items-center hover:cursor-pointer transition-transform duration-200 hover:scale-110">
+              <IconBrandGithub className="h-4 w-4" />
+              <span>GitHub</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </main>
   );

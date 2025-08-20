@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo.png" alt="PatternBook Logo" width="256"/>
+</p>
+
 # @shredbx/reactbook v0.0.1
 
 ## What & Why

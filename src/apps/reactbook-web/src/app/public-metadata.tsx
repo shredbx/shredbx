@@ -9,30 +9,34 @@ export const MetaConfig: MetadataConfig = {
   siteName: "ReactBook",
 };
 
-export const DefaultMetadata: Metadata = {
-  title: MetaConfig.title,
-  description: MetaConfig.description,
-  openGraph: {
-    title: MetaConfig.title,
-    description: MetaConfig.description,
-    url: MetaConfig.baseUrl,
-    siteName: MetaConfig.siteName,
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: MetaConfig.title,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: MetaConfig.title,
-    description: MetaConfig.description,
-    images: ["/opengraph-image"],
-  },
-};
+// Local generateMetadata function (server-side only)
+function generateMetadata(config: MetadataConfig): Metadata {
+  return {
+    title: config.title,
+    description: config.description,
+    openGraph: {
+      title: config.title,
+      description: config.description,
+      url: config.baseUrl,
+      siteName: config.siteName,
+      type: "website",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: config.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: config.title,
+      description: config.description,
+      images: ["/opengraph-image"],
+    },
+  };
+}
 
+export const DefaultMetadata: Metadata = generateMetadata(MetaConfig);
 export const MetaBaseUrl = MetaConfig.baseUrl;

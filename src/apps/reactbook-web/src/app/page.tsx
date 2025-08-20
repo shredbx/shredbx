@@ -42,7 +42,7 @@ export default function Home() {
                 height={96}
                 priority
                 unoptimized
-                className="w-32 h-32 rounded-xl"
+                className="w-32 h-32 rounded-xl object-contain flex-shrink-0"
               />
             </div>
           </div>

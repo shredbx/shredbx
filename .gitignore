@@ -2,6 +2,12 @@
 
 # dependencies
 
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
 node_modules
 .pnp
 .pnp.*

@@ -27,7 +27,12 @@ export function ProjectsReferenceCatalog({
   }
 
   return (
-    <div className={cn("w-full flex justify-center px-4 py-8", className)}>
+    <div
+      className={cn(
+        "w-full flex items-center justify-center px-4 py-8",
+        className
+      )}
+    >
       <div className="w-full max-w-7xl">
         <h2 className="text-2xl font-semibold text-center mb-6">{title}</h2>
 

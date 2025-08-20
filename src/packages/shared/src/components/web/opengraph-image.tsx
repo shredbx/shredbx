@@ -1,3 +1,5 @@
+import React from "react";
+
 interface OpenGraphImageProps {
   title: string;
   baseUrl: string;

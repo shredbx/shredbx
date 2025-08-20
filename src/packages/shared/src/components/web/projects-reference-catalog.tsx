@@ -37,7 +37,7 @@ export function ProjectsReferenceCatalog({
         <h2 className="text-2xl font-semibold text-center mb-6">{title}</h2>
 
         {/* Desktop: Horizontal scroll layout */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-center">
             {projectsToShow.map((project) => (
               <div key={project} className="flex-shrink-0 w-80">
@@ -48,7 +48,7 @@ export function ProjectsReferenceCatalog({
         </div>
 
         {/* Mobile: Vertical layout */}
-        <div className="md:hidden space-y-4">
+        <div className="lg:hidden space-y-4">
           {projectsToShow.map((project) => (
             <ProjectReference key={project} project={project} />
           ))}

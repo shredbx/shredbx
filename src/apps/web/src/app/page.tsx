@@ -4,7 +4,7 @@ import { ProjectsReferenceCatalog } from "@shredbx/shared/components/web";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-background/50">
+    <div className="min-h-screen flex flex-col space-y-4 md:space-y-0 bg-gradient-to-b from-background to-background/50">
       {/* Navbar */}
       <header className="flex w-full border-b px-4 md:px-6">
         <div className="flex h-16 w-full items-center justify-between gap-4">
@@ -33,7 +33,7 @@ export default function Home() {
         <div className="relative flex items-center gap-12">
           {/* Animated logo container */}
           <div className="lg:flex">
-            <div className="relative bg-muted/20 rounded-2xl p-4 border border-border/50 -ml-44">
+            <div className="relative bg-muted/20 rounded-2xl p-4 border border-border/50 md:-ml-44">
               <Image
                 src="/logo-animated-12.gif"
                 alt="ShredBX Animated Logo"

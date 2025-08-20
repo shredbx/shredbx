@@ -6,6 +6,7 @@ export interface ProjectInfo {
   url: string;
   description: string;
   logoPath: string;
+  github: string;
 }
 
 export const PROJECTS: Record<ProjectType, ProjectInfo> = {
@@ -13,6 +14,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     id: "shredbx",
     name: "ShredBX",
     url: "https://shredbx.com",
+    github: "https://github.com/shredbx/shredbx",
     description:
       "Experimental dev lab and monorepo — a living workspace for reusable patterns, tools, and projects",
     logoPath: "https://shredbx.com/logo.png",
@@ -21,6 +23,8 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     id: "reactbook",
     name: "ReactBook",
     url: "https://reactbook.shredbx.com",
+    github:
+      "https://github.com/shredbx/shredbx/tree/main/src/apps/reactbook-web",
     description:
       "Interactive playground for React experiments, demos, and component patterns",
     logoPath: "https://reactbook.shredbx.com/logo.png",
@@ -29,6 +33,8 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     id: "patternbook",
     name: "PatternBook",
     url: "https://github.com/shredbx/shredbx/tree/main/src/packages/patternbook",
+    github:
+      "https://github.com/shredbx/shredbx/tree/main/src/packages/patternbook",
     description:
       "Catalog of proven solutions — capture once, reuse everywhere. A recipe book for code and workflows",
     logoPath:

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { ProjectType, PROJECTS } from "../../types/projects";
 import {
@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import { Button } from "./ui/button";
 
 interface ProjectReferenceProps {
   project: ProjectType;
@@ -23,10 +24,16 @@ export function ProjectReference({
 }: ProjectReferenceProps) {
   const projectInfo = PROJECTS[project];
 
+  const handleGithubClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(projectInfo.github, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Card
       className={cn(
-        "group hover:shadow-lg transition-all duration-200 cursor-pointer",
+        "group hover:shadow-lg transition-all duration-200",
         className
       )}
     >
@@ -34,7 +41,7 @@ export function ProjectReference({
         href={projectInfo.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block cursor-pointer"
       >
         <CardHeader className="pb-4">
           <div className="flex items-center justify-between">
@@ -51,8 +58,19 @@ export function ProjectReference({
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-4">
           <CardDescription>{projectInfo.description}</CardDescription>
+          <div className="flex justify-end">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleGithubClick}
+              className="text-xs h-8 px-3"
+            >
+              <Github className="w-3 h-3 mr-2" />
+              GitHub
+            </Button>
+          </div>
         </CardContent>
       </a>
     </Card>

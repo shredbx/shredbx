@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import "@shredbx/shared/styles/web.css";
 
 import { DefaultMetadata, MetaBaseUrl } from "@/app/public-metadata";
 

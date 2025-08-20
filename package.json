@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "dev": "concurrently \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
+    "dev": "pnpm build:shared && concurrently \"pnpm dev:shared\" \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
+    "dev:shared": "pnpm --filter @shredbx/shared dev",
     "dev:web": "pnpm --filter @shredbx/web dev",
     "dev:reactbook-web": "pnpm --filter @shredbx/reactbook-web dev",
+    "build:shared": "pnpm --filter @shredbx/shared build",
     "dev:reactbook": "pnpm --filter @shredbx/reactbook dev",
     "build": "pnpm build:packages && pnpm build:apps",
     "build:packages": "pnpm --filter './src/packages/*' build",

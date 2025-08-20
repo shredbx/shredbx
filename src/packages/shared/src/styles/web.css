@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Shared web component styles for @shredbx/shared package */
+
+@layer base {
+  /* Base styles that won't conflict with consuming apps */
+}
+
+@layer components {
+  /* Component-specific styles can go here if needed */
+}
+
+@layer utilities {
+  /* Custom utilities specific to shared components */
+}

@@ -11,7 +11,7 @@ export default function Home() {
           {/* Left side - Logo and title */}
           <div className="flex items-center gap-3">
             <Image
-              src="/reacbook-logo-animated-1.gif"
+              src="/logo.png"
               alt="ReactBook Logo"
               width={32}
               height={32}
@@ -38,8 +38,8 @@ export default function Home() {
               <Image
                 src="/reacbook-logo-animated-1.gif"
                 alt="ReactBook Animated Logo"
-                width={128}
-                height={128}
+                width={96}
+                height={96}
                 priority
                 unoptimized
                 className="w-32 h-32 rounded-xl"

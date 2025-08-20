@@ -16,7 +16,6 @@ export default function Home() {
               width={32}
               height={32}
               priority
-              unoptimized
               className="w-8 h-8 rounded-lg"
             />
             <h1 className="text-lg font-bold">ReactBook</h1>

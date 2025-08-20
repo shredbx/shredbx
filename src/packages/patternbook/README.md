@@ -2,11 +2,11 @@
   <img src="./logo.png" alt="PatternBook Logo" width="256"/>
 </p>
 
-# PatternBook
+# PatternBook v0.1
 
 ## What & Why
 
-PatternBook captures working solutions as reusable patterns. Write real, modular code that automatically becomes discoverable and composable across projects.
+PatternBook captures working solutions as reusable pattern s. Write real, modular code that automatically becomes discoverable and composable across projects.
 
 It serves as a **single source of truth for AI assistants** — making them prioritize your proven approaches over generic alternatives, while enabling systematic refactoring and consistent team development.
 

@@ -2,24 +2,43 @@
   <img src="./logo.gif" alt="PatternBook Logo" width="256"/>
 </p>
 
-# ShredBX Monorepo
+# ShredBX Monorepo v0.0.1
 
-This repository is the **workspace for ShredBX experiments and development**.  
-It serves as a single place to organize, document, and evolve reusable patterns, tools, and projects.
+## What & Why
 
-## Purpose
+This monorepo is the **open-source workspace** for ShredBX experiments and projects.  
+Its purpose is to collect, document, and evolve reusable solutions in one place, making them accessible across apps, packages, and external projects.
 
-The goal of this monorepo is to build a **living knowledge base of proven solutions**.  
-Everything developed here is intended to be modular, composable, and reusable across projects.
+At the core is the **PatternBook methodology**, which turns real code into discoverable, reusable knowledge for both humans and AI.
 
-## PatternBook
+## When to Use
 
-At the core of this monorepo is the **PatternBook**:
+- To explore ShredBX’s open-source experiments
+- To reuse modular solutions across projects
+- To learn from documented examples and patterns
+- To contribute new patterns or improvements
 
-- A methodology for capturing solutions as reusable patterns
-- A documentation-first approach that makes knowledge discoverable by both humans and AI
-- A way to keep development consistent, efficient, and scalable
+## When Not to Use
 
-Think of PatternBook as a **recipe book**: solutions are written once, documented clearly, and reused everywhere.
+- For closed, proprietary projects
+- For isolated experiments that don’t benefit from shared context
 
-👉 See [PatternBook documentation](./src/packages/patternbook/README.md) for details.
+## How It Works
+
+- **Packages** contain reusable building blocks (e.g., ReactBook, PatternBook)
+- **Apps** provide interfaces, demos, and workspaces (e.g., web portals)
+- Documentation is kept next to the source (code + docs together)
+- Everything is indexed and structured to be discoverable by AI and humans
+
+## Examples / Use-cases
+
+- Browsing React patterns through ReactBook-Web
+- Sharing Zustand slice patterns across web and native apps
+- Using the repo as a reference for modular, scalable solutions
+
+## References
+
+- [PatternBook](/src/packages/patternbook/README.md)
+- [ReactBook](/src/packages/reactbook/README.md)
+- [ReactBook-Web](/src/apps/reactbook-web/README.md)
+- [ShredBX Web](/src/apps/web/README.md)

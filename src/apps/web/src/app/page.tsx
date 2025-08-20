@@ -35,7 +35,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="group"
             >
-              <div className="flex flex-row space-x-2 justify-center items-center hover:cursor-pointer transition-transform duration-200 hover:scale-110">
+              <div className="flex flex-row space-x-2 justify-center items-center hover:cursor-pointer transition-transform duration-200 hover:scale-105">
                 <IconBrandGithub className="h-4 w-4" />
                 <span>GitHub</span>
               </div>

@@ -27,7 +27,7 @@ export function ProjectReference({
   const handleGithubClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    window.open(projectInfo.github, "_blank", "noopener,noreferrer");
+    window.open(projectInfo.github, "noopener,noreferrer");
   };
 
   return (

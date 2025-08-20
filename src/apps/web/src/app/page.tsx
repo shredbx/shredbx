@@ -40,7 +40,7 @@ export default function Home() {
       <div className="text-center space-y-4">
         <div className="flex justify-center">
           <Image
-            src="/logo-animated-2.gif"
+            src="/logo-animated-8.gif"
             alt="ShredBX Logo"
             width={96}
             height={96}

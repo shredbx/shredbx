@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo-animated-2.gif" alt="PatternBook Logo" width="256"/>
+  <img src="./logo-animated-2.gif" alt="shredbx logo" width="256"/>
 </p>
 
 # ShredBX Monorepo v0.0.1

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/reacbook-logo-animated-1.gif" alt="ReactBook Logo" width="256"/>
+</p>
+
 # @shredbx/reactbook-web v0.0.1
 
 ## What & Why

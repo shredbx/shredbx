@@ -1,33 +1,38 @@
 import { Metadata } from "next";
+import { MetadataConfig } from "@shredbx/shared";
 
-export const MetaDefaultTitle = "ShredBX – Experimental Lab";
-export const MetaDefaultDescription =
-  "Build. Break. Rebuild. Exploring web, mobile, and AI patterns – open source projects and experiments on GitHub.";
-
-export const MetaBaseUrl = "https://shredbx.com";
+export const MetaConfig: MetadataConfig = {
+  title: "ShredBX – Experimental Lab",
+  description:
+    "Build. Break. Rebuild. Exploring web, mobile, and AI patterns – open source projects and experiments on GitHub.",
+  baseUrl: "https://shredbx.com",
+  siteName: "ShredBX",
+};
 
 export const DefaultMetadata: Metadata = {
-  title: MetaDefaultTitle,
-  description: MetaDefaultDescription,
+  title: MetaConfig.title,
+  description: MetaConfig.description,
   openGraph: {
-    title: MetaDefaultTitle,
-    description: MetaDefaultDescription,
-    url: MetaBaseUrl,
-    siteName: "ShredBX",
+    title: MetaConfig.title,
+    description: MetaConfig.description,
+    url: MetaConfig.baseUrl,
+    siteName: MetaConfig.siteName,
     type: "website",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: MetaDefaultTitle,
+        alt: MetaConfig.title,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: MetaDefaultTitle,
-    description: MetaDefaultDescription,
+    title: MetaConfig.title,
+    description: MetaConfig.description,
     images: ["/opengraph-image"],
   },
 };
+
+export const MetaBaseUrl = MetaConfig.baseUrl;

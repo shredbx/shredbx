@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@shredbx/shared/components/web";
 
 export function DeployButton() {
   return (

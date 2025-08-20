@@ -1,32 +1,18 @@
 import { ImageResponse } from "next/og";
-import { MetaDefaultTitle, MetaBaseUrl } from "./public-metadata";
+import {
+  createOpenGraphImageJSX,
+  OG_IMAGE_SIZE,
+  OG_IMAGE_CONTENT_TYPE,
+} from "@shredbx/shared/components/web";
+import { MetaConfig } from "./public-metadata";
 
-export const alt = MetaDefaultTitle;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const alt = MetaConfig.title;
+export const size = OG_IMAGE_SIZE;
+export const contentType = OG_IMAGE_CONTENT_TYPE;
 export const runtime = "edge";
 
 export default async function Image() {
-  // Absolute URL works in Edge runtime and when crawlers render the image
-  const logoSrc = `${MetaBaseUrl}/logo.png`;
-
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "white",
-        }}
-      >
-        <img src={logoSrc} height="360" alt={alt} />
-      </div>
-    ),
-    {
-      ...size,
-    }
-  );
+  return new ImageResponse(createOpenGraphImageJSX(MetaConfig), {
+    ...size,
+  });
 }

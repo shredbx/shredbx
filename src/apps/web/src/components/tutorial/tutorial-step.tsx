@@ -1,4 +1,4 @@
-import { Checkbox } from "../ui/checkbox";
+import { Checkbox } from "@shredbx/shared/components/web";
 
 export function TutorialStep({
   title,

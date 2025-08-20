@@ -2,6 +2,14 @@ export { ProjectReference } from "./project-reference";
 export { ProjectsReferenceCatalog } from "./projects-reference-catalog";
 export { ThemeSwitcher } from "./theme-switcher";
 
+// OpenGraph components
+export {
+  createOpenGraphImageJSX,
+  OG_IMAGE_SIZE,
+  OG_IMAGE_CONTENT_TYPE,
+  OG_IMAGE_RUNTIME,
+} from "./opengraph-image";
+
 // UI Components
 export {
   Card,

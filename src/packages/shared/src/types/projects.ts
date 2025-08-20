@@ -1,4 +1,4 @@
-export type ProjectType = "shredbx" | "reactbook";
+export type ProjectType = "shredbx" | "reactbook" | "patternbook";
 
 export interface ProjectInfo {
   id: ProjectType;
@@ -13,14 +13,16 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     id: "shredbx",
     name: "ShredBX",
     url: "https://shredbx.com",
-    description: "The ultimate platform for extreme sports enthusiasts",
+    description:
+      "Experimental dev lab and monorepo — a living workspace for reusable patterns, tools, and projects",
     logoPath: "https://shredbx.com/logo.png",
   },
   reactbook: {
     id: "reactbook",
     name: "ReactBook",
     url: "https://reactbook.shredbx.com",
-    description: "Interactive React component documentation and examples",
+    description:
+      "Interactive playground for React experiments, demos, and component patterns",
     logoPath: "https://reactbook.shredbx.com/logo.png",
   },
   patternbook: {
@@ -28,7 +30,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     name: "PatternBook",
     url: "https://github.com/shredbx/shredbx/tree/main/src/packages/patternbook",
     description:
-      "PatternBook is a catalog of proven solutions you have already built. Instead of re-inventing, you capture them once and reuse them across projects.",
+      "Catalog of proven solutions — capture once, reuse everywhere. A recipe book for code and workflows",
     logoPath:
       "https://github.com/shredbx/shredbx/blob/main/src/packages/patternbook/logo.png?raw=true",
   },

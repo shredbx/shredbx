@@ -1,8 +1,17 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@shredbx/shared";
 import { createClient } from "@/lib/supabase/client";
-import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Input, Label } from "@shredbx/shared/components/web";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Input,
+  Label,
+} from "@shredbx/shared/components/web";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

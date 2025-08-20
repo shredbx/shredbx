@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "installCommand": "cd ../../../ && pnpm install",
+  "buildCommand": "cd ../../../ && pnpm build:shared && pnpm --filter @shredbx/reactbook-web build",
+  "devCommand": "cd ../../../ && pnpm --filter @shredbx/reactbook-web dev",
+  "outputDirectory": ".next"
+}

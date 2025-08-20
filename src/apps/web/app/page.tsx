@@ -8,7 +8,9 @@ import { track } from "@vercel/analytics";
 const REDIRECT_TIMEOUT = 3000;
 
 export default function Home() {
-  const [countdown, setCountdown] = useState(Math.ceil(REDIRECT_TIMEOUT / 1000));
+  const [countdown, setCountdown] = useState(
+    Math.ceil(REDIRECT_TIMEOUT / 1000)
+  );
 
   useEffect(() => {
     // Track the visit

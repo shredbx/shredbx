@@ -14,7 +14,7 @@ interface ProjectsReferenceCatalogProps {
 export function ProjectsReferenceCatalog({
   currentProject,
   className,
-  title = "shredbx - experimental dev lab - projects",
+  title = "shredbx - eXrimental lab - projects",
 }: ProjectsReferenceCatalogProps) {
   const projectsToShow = currentProject
     ? (Object.keys(PROJECTS).filter(

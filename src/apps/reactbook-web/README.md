@@ -6,7 +6,7 @@
 
 ## What & Why
 
-This is the **Next.js knowledgebase app** for ReactBook.  
+This is the **React / Next.js knowledgebase app** powered by ReactBook.  
 It provides a place to explore React-related experiments, patterns, documentation, and live demos.
 
 ## When to Use

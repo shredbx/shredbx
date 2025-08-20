@@ -38,7 +38,7 @@ export function ProjectsReferenceCatalog({
 
         {/* Desktop: Horizontal scroll layout */}
         <div className="hidden md:block">
-          <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent">
+          <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-center">
             {projectsToShow.map((project) => (
               <div key={project} className="flex-shrink-0 w-80">
                 <ProjectReference project={project} />

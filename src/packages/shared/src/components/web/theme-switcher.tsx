@@ -39,43 +39,34 @@ const ThemeSwitcher = ({ className }: { className?: string }) => {
 
   return (
     <div className={className}>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Toggle
-              variant="outline"
-              className="group data-[state=on]:hover:bg-muted size-9 hover:cursor-pointer data-[state=on]:bg-transparent"
-              pressed={theme === "dark"}
-              onPressedChange={toggleTheme}
-              aria-label={getAriaLabel()}
-            >
-              {/* Light theme icon */}
-              <SunIcon
-                size={16}
-                className={`shrink-0 transition-all ${
-                  theme === "light"
-                    ? "scale-100 opacity-100"
-                    : "absolute scale-0 opacity-0"
-                }`}
-                aria-hidden="true"
-              />
-              {/* Dark theme icon */}
-              <MoonIcon
-                size={16}
-                className={`shrink-0 transition-all ${
-                  theme === "dark"
-                    ? "scale-100 opacity-100"
-                    : "absolute scale-0 opacity-0"
-                }`}
-                aria-hidden="true"
-              />
-            </Toggle>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>{getTooltipContent()}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <Toggle
+        variant="default"
+        className="group data-[state=on]:hover:bg-muted size-9 hover:cursor-pointer data-[state=on]:bg-transparent"
+        pressed={theme === "dark"}
+        onPressedChange={toggleTheme}
+        aria-label={getAriaLabel()}
+      >
+        {/* Light theme icon */}
+        <SunIcon
+          size={16}
+          className={`shrink-0 transition-all ${
+            theme === "light"
+              ? "scale-100 opacity-100"
+              : "absolute scale-0 opacity-0"
+          }`}
+          aria-hidden="true"
+        />
+        {/* Dark theme icon */}
+        <MoonIcon
+          size={16}
+          className={`shrink-0 transition-all ${
+            theme === "dark"
+              ? "scale-100 opacity-100"
+              : "absolute scale-0 opacity-0"
+          }`}
+          aria-hidden="true"
+        />
+      </Toggle>
     </div>
   );
 };

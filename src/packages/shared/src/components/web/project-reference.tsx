@@ -26,7 +26,7 @@ export function ProjectReference({
   return (
     <Card
       className={cn(
-        "group hover:shadow-lg transition-all duration-200 cursor-pointer",
+        "group hover:shadow-lg hover:scale-[1.15] transition-all duration-200 cursor-pointer",
         className
       )}
     >

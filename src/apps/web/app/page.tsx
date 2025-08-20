@@ -5,7 +5,7 @@ import Image from "next/image";
 import { track } from "@vercel/analytics";
 
 // Single source of truth for timeout (in milliseconds)
-const REDIRECT_TIMEOUT = 3000;
+const REDIRECT_TIMEOUT = 5000;
 
 export default function Home() {
   const [countdown, setCountdown] = useState(
@@ -40,12 +40,12 @@ export default function Home() {
       <div className="text-center space-y-4">
         <div className="flex justify-center">
           <Image
-            src="/logo/shredbx-logo-sm.png"
+            src="/logo-animated-2.gif"
             alt="ShredBX Logo"
             width={96}
             height={96}
             priority
-            className="w-24 h-24 bg-dark rounded-md"
+            className="w-64 h-64 bg-dark rounded-md"
           />
         </div>
         <h1 className="text-4xl font-bold -mt-2">shredbx</h1>

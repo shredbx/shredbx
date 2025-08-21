@@ -27,7 +27,7 @@ export function ProjectsReferenceCatalog({
   }
 
   return (
-    <div className={cn("w-full flex  px-4 py-8", className)}>
+    <div className={cn("w-full flex px-4 py-8", className)}>
       <div className="w-full max-w-7xl">
         <h2 className="text-2xl font-semibold text-center mb-6">{title}</h2>
 
@@ -35,7 +35,7 @@ export function ProjectsReferenceCatalog({
         <div className="hidden md:block">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-start">
             {projectsToShow.map((project) => (
-              <div key={project} className="h-52">
+              <div key={project} className="min:h-48">
                 <ProjectReference project={project} />
               </div>
             ))}

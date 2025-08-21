@@ -31,22 +31,9 @@ export default function Home() {
       {/* Main content area */}
       <main className="flex-1 flex justify-center items-center px-6 md:px-12">
         <div className="relative flex items-center gap-12">
-          {/* Animated logo container */}
-          <div className="lg:flex">
-            <div className="relative bg-muted/20 rounded-2xl p-4 border border-border/50 md:-ml-44">
-              <Image
-                src="/logo-animated-12.gif"
-                alt="ShredBX Animated Logo"
-                width={96}
-                height={96}
-                priority
-                unoptimized
-                className="w-32 h-32 rounded-xl object-contain flex-shrink-0"
-              />
-            </div>
-          </div>
           {/* Main content */}
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 py-8">
+            <h1 className="text-4xl font-bold">shredbx</h1>
             <p className="text-lg text-muted-foreground font-medium">
               eXperimental lab
             </p>

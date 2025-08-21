@@ -50,7 +50,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
   dynamic_forms: {
     id: "dynamic_forms",
     name: "Dynamic Forms",
-    url: "https://ex-nextjs-zustand-dynamic-forms-demo.vercel.app/en",
+    url: "https://react-forms-demo.shredbx.com",
     github: "https://github.com/shredbx/ex-nextjs-zustand-dynamic-forms-demo",
     description: "Dynamic forms with Next.js, Zustand, and React Hook Form",
     logoPath: "https://shredbx.com/references/logo-dynamic-forms.png",

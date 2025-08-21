@@ -30,7 +30,8 @@ export default function Home() {
       {/* Main content area */}
       <main className=" flex justify-center items-center px-6 md:px-12 mt-4">
         {/* Main content */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 py-8">
+          <h1 className="text-4xl font-bold">ReactBook</h1>
           <p className="text-lg text-muted-foreground font-medium">
             React / Next.js knowledgebase
           </p>

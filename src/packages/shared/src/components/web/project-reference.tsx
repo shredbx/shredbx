@@ -45,15 +45,17 @@ export function ProjectReference({
       >
         <CardHeader className="pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <AnimatedImage
-                src={projectInfo.logoPath}
-                gifSrc={projectInfo.logoGifPath}
-                alt={`${projectInfo.name} logo`}
-                className="w-16 h-16 object-contain"
-                width={64}
-                height={64}
-              />
+            <div className="flex items-center space-x-3 rounded-sm ">
+              <div className="overflow-clip rounded-md">
+                <AnimatedImage
+                  src={projectInfo.logoPath}
+                  gifSrc={projectInfo.logoGifPath}
+                  alt={`${projectInfo.name} logo`}
+                  className="w-20 h-20 object-cover overflow-clip"
+                  width={82}
+                  height={82}
+                />
+              </div>
               <CardTitle className="text-lg group-hover:text-primary transition-colors">
                 {projectInfo.name}
               </CardTitle>

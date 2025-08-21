@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "dev": "pnpm build:shared && PORT_WEB=3000 PORT_REACTBOOK=3001 concurrently \"pnpm dev:shared\" \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
+    "dev": "pnpm build:shared && PORT_WEB=3000 PORT_REACTBOOK=3001 concurrently \"pnpm dev:shared\" \"pnpm dev:mcp-server\" \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
     "dev:shared": "pnpm --filter @shredbx/shared dev",
     "dev:web": "PORT=$PORT_WEB pnpm --filter @shredbx/web dev",
     "dev:reactbook-web": "PORT=$PORT_REACTBOOK pnpm --filter @shredbx/reactbook-web dev",
@@ -13,6 +13,8 @@
     "dev:web-only": "PORT_WEB=3000 pnpm dev:web",
     "dev:reactbook-only": "PORT_REACTBOOK=3001 pnpm dev:reactbook-web",
     "dev:mcp-server-only": "pnpm dev:mcp-server",
+    "kill-ports": "lsof -ti:3000,3001 | xargs kill -9 2>/dev/null || true",
+    "dev:clean": "pnpm kill-ports && pnpm dev",
     "build": "pnpm build:packages && pnpm build:apps",
     "build:packages": "pnpm --filter './src/packages/*' build",
     "build:apps": "pnpm --filter './src/apps/*' build",

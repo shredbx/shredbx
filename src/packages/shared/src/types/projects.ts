@@ -61,7 +61,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
   bestays: {
     id: "bestays",
     name: "Best Stays Thailand - Properties, Land & Rentals",
-    url: "https://beststays.com",
+    url: "https://bestays.app",
     description:
       "Real estate platform built with support of PatternBook — showcasing how reusable patterns and workflows from the lab power production-grade applications",
     logoPath: "https://shredbx.com/references/logo-bestays.png",

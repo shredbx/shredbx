@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils";
 
 interface AnimatedImageProps {
   src: string;
-  gifSrc: string;
+  gifSrc?: string | undefined;
   alt: string;
   className?: string;
   width?: number;
@@ -28,16 +28,16 @@ export function AnimatedImage({
 
     setIsGifLoading(true);
     const img = new Image();
-    
+
     img.onload = () => {
       setIsGifLoaded(true);
       setIsGifLoading(false);
     };
-    
+
     img.onerror = () => {
       setIsGifLoading(false);
     };
-    
+
     img.src = gifSrc;
   }, [gifSrc]);
 
@@ -54,7 +54,7 @@ export function AnimatedImage({
           isGifLoaded ? "opacity-0" : "opacity-100"
         )}
       />
-      
+
       {/* GIF overlay - visible when loaded */}
       {isGifLoaded && (
         <img
@@ -68,7 +68,7 @@ export function AnimatedImage({
           )}
         />
       )}
-      
+
       {/* Loading indicator */}
       {isGifLoading && (
         <div className="absolute inset-0 flex items-center justify-center">

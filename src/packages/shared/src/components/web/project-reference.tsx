@@ -78,17 +78,19 @@ export function ProjectReference({
             {projectInfo.description}
           </CardDescription>
 
-          <div className="flex justify-end items-end pt-4">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleGithubClick}
-              className="text-xs h-8 px-3"
-            >
-              <Github className="w-3 h-3 mr-2" />
-              GitHub
-            </Button>
-          </div>
+          {projectInfo.github && (
+            <div className="flex justify-end items-end pt-4">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleGithubClick}
+                className="text-xs h-8 px-3"
+              >
+                <Github className="w-3 h-3 mr-2" />
+                GitHub
+              </Button>
+            </div>
+          )}
         </CardContent>
       </a>
     </Card>

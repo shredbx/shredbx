@@ -2,7 +2,8 @@ export type ProjectType =
   | "shredbx"
   | "reactbook"
   | "patternbook"
-  | "dynamic_forms";
+  | "dynamic_forms"
+  | "bestays";
 
 export interface ProjectInfo {
   id: ProjectType;
@@ -10,8 +11,8 @@ export interface ProjectInfo {
   url: string;
   description: string;
   logoPath: string;
-  logoGifPath: string;
-  github: string;
+  logoGifPath?: string | undefined;
+  github?: string | undefined;
 }
 
 export const PROJECTS: Record<ProjectType, ProjectInfo> = {
@@ -56,5 +57,13 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     logoPath: "https://shredbx.com/references/logo-dynamic-forms.png",
     logoGifPath:
       "https://shredbx.com/references/logo-dynamic-forms-animated.gif",
+  },
+  bestays: {
+    id: "bestays",
+    name: "Best Stays Thailand - Properties, Land & Rentals",
+    url: "https://beststays.com",
+    description:
+      "Real estate platform built with support of PatternBook — showcasing how reusable patterns and workflows from the lab power production-grade applications",
+    logoPath: "https://shredbx.com/references/logo-bestays.png",
   },
 } as const;

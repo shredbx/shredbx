@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "dev": "pnpm build:shared && PORT_WEB=3000 PORT_REACTBOOK=3001 concurrently \"pnpm dev:shared\" \"pnpm dev:mcp-server\" \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
+    "dev": "pnpm build:shared && PORT_WEB=3000 PORT_REACTBOOK=3001 concurrently \"pnpm dev:shared\" \"pnpm dev:reactbook-web\" \"pnpm dev:web\"",
     "dev:shared": "pnpm --filter @shredbx/shared dev",
     "dev:web": "PORT=$PORT_WEB pnpm --filter @shredbx/web dev",
     "dev:reactbook-web": "PORT=$PORT_REACTBOOK pnpm --filter @shredbx/reactbook-web dev",

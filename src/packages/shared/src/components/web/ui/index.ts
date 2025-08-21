@@ -28,3 +28,4 @@ export {
   TooltipContent,
   TooltipProvider,
 } from "./tooltip";
+export { AnimatedImage } from "../animated-image";

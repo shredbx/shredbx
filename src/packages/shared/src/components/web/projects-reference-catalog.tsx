@@ -35,7 +35,7 @@ export function ProjectsReferenceCatalog({
         <div className="hidden md:block">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-start">
             {projectsToShow.map((project) => (
-              <div key={project} className="h-64">
+              <div key={project} className="h-52">
                 <ProjectReference project={project} />
               </div>
             ))}
@@ -43,7 +43,7 @@ export function ProjectsReferenceCatalog({
         </div>
 
         {/* Mobile: Vertical layout */}
-        <div className="md:hidden space-y-4">
+        <div className="md:hidden space-y-4 px-4">
           {projectsToShow.map((project) => (
             <ProjectReference key={project} project={project} />
           ))}

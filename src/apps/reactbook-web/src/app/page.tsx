@@ -27,42 +27,23 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Main content area */}
-      <main className="flex-1 flex justify-center items-center px-6 md:px-12">
-        <div className="relative flex items-center gap-12">
-          {/* Animated logo container */}
-          <div className="lg:flex">
-            <div className="relative bg-muted/20 rounded-2xl p-4 border border-border/50 md:-ml-44">
-              <Image
-                src="/reacbook-logo-animated-1.gif"
-                alt="ReactBook Animated Logo"
-                width={96}
-                height={96}
-                priority
-                unoptimized
-                className="w-32 h-32 rounded-xl object-contain flex-shrink-0"
-              />
-            </div>
-          </div>
-
-          {/* Main content */}
-          <div className="text-center space-y-4">
-            <p className="text-lg text-muted-foreground font-medium">
-              React / Next.js knowledgebase
-            </p>
-            <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm text-muted-foreground">
-                coming soon...
-              </span>
-            </div>
+      <main className=" flex justify-center items-center px-6 md:px-12 mt-4">
+        {/* Main content */}
+        <div className="text-center space-y-4">
+          <p className="text-lg text-muted-foreground font-medium">
+            React / Next.js knowledgebase
+          </p>
+          <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
+            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-sm text-muted-foreground">
+              coming soon...
+            </span>
           </div>
         </div>
       </main>
-
       {/* Footer with projects catalog */}
-      <footer className="border-t border-border/50 bg-muted/20 mt-auto">
+      <footer className="border-t border-border/50 bg-muted/20 mt-auto flex px-12">
         <ProjectsReferenceCatalog />
       </footer>
     </div>

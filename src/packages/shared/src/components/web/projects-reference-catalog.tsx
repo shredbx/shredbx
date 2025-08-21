@@ -14,7 +14,7 @@ interface ProjectsReferenceCatalogProps {
 export function ProjectsReferenceCatalog({
   currentProject,
   className,
-  title = "shredbx - eXperimental lab - projects",
+  title = "shredbx - eXperimental lab - projects!",
 }: ProjectsReferenceCatalogProps) {
   const projectsToShow = currentProject
     ? (Object.keys(PROJECTS).filter(
@@ -27,20 +27,15 @@ export function ProjectsReferenceCatalog({
   }
 
   return (
-    <div
-      className={cn(
-        "w-full flex items-center justify-center px-4 py-8",
-        className
-      )}
-    >
+    <div className={cn("w-full flex  px-4 py-8", className)}>
       <div className="w-full max-w-7xl">
         <h2 className="text-2xl font-semibold text-center mb-6">{title}</h2>
 
         {/* Desktop: Horizontal scroll layout */}
-        <div className="hidden lg:block">
-          <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-center">
+        <div className="hidden md:block">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent justify-start">
             {projectsToShow.map((project) => (
-              <div key={project} className="flex-shrink-0 w-80">
+              <div key={project} className="h-64">
                 <ProjectReference project={project} />
               </div>
             ))}
@@ -48,7 +43,7 @@ export function ProjectsReferenceCatalog({
         </div>
 
         {/* Mobile: Vertical layout */}
-        <div className="lg:hidden space-y-4">
+        <div className="md:hidden space-y-4">
           {projectsToShow.map((project) => (
             <ProjectReference key={project} project={project} />
           ))}

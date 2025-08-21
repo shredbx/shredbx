@@ -33,7 +33,7 @@ export function ProjectReference({
   return (
     <Card
       className={cn(
-        "group hover:shadow-lg transition-all duration-200",
+        "group hover:shadow-lg transition-all duration-200 w-full h-full bg-amber-950",
         className
       )}
     >
@@ -57,18 +57,20 @@ export function ProjectReference({
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </div>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4 bg-amber-300">
           <CardDescription>{projectInfo.description}</CardDescription>
-          <div className="flex justify-end">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleGithubClick}
-              className="text-xs h-8 px-3"
-            >
-              <Github className="w-3 h-3 mr-2" />
-              GitHub
-            </Button>
+          <div className="flex items-end bg-red-300 h-full justify-end">
+            <div className="flex justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleGithubClick}
+                className="text-xs h-8 px-3"
+              >
+                <Github className="w-3 h-3 mr-2" />
+                GitHub
+              </Button>
+            </div>{" "}
           </div>
         </CardContent>
       </a>

@@ -35,7 +35,7 @@ export default function Home() {
           <div className="text-center space-y-4 py-8">
             <h1 className="text-4xl font-bold">shredbx</h1>
             <p className="text-lg text-muted-foreground font-medium">
-              eXperimental lab
+              eXperimental Open Source Lab
             </p>
             <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
               <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></div>

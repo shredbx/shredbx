@@ -22,7 +22,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     url: "https://shredbx.com",
     github: "https://github.com/shredbx/shredbx",
     description:
-      "Experimental dev lab and monorepo — a living workspace for reusable patterns, tools, and projects",
+      "ShredBX — eXperimental Open Source Lab Monorepo — a living workspace for reusable patterns, tools, and projects",
     logoPath: "https://shredbx.com/references/logo-shredbx.png",
     logoGifPath: "https://shredbx.com/references/logo-shredbx-animated.gif",
   },

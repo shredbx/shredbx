@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { MetadataConfig } from "@shredbx/shared";
 
 export const MetaConfig: MetadataConfig = {
-  title: "ShredBX – Experimental Lab",
+  title: "ShredBX — eXperimental Open Source Lab",
   description:
     "Build. Break. Rebuild. Exploring web, mobile, and AI patterns – open source projects and experiments on GitHub.",
   baseUrl: "https://shredbx.com",

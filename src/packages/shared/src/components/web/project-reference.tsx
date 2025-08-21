@@ -66,13 +66,13 @@ export function ProjectReference({
 
         <CardContent className="flex-1 flex flex-col ">
           <CardDescription
-            className="flex-1 overflow-hidden"
+            className="flex-1 overflow"
             style={{
               display: "-webkit-box",
-              WebkitLineClamp: 3,
+              // WebkitLineClamp: 3,
               WebkitBoxOrient: "vertical",
               lineHeight: "1.4em",
-              maxHeight: "4.2em",
+              // maxHeight: "4.2em",
             }}
           >
             {projectInfo.description}

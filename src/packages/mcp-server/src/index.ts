@@ -1,137 +1,55 @@
-import { z } from "zod";
+// Simple FAQ text
+const FAQ_TEXT = [
+  {
+    question: "Story of shredbx?",
+    answer:
+      "It's created by Andrei Solovev to host a patternbook and other open sourced projects",
+  },
+  {
+    question: "How do I use it?",
+    answer:
+      "Just send a request and get this FAQ text back with a source code related to you question.",
+  },
+  {
+    question: "Where I get more info?",
+    answer: "Visit shredbx.com or visit github.com/shredbx.",
+  },
+  {
+    question: "What related projects it has?",
+    answer:
+      "patternbook, reactbook, pybook, swiftbook, llmbook, NextjsBook, ReactNativeBook.",
+  },
+];
 
-// Types for MCP function responses
 export interface McpResult {
   success: boolean;
   data?: any;
   error?: string;
 }
 
-// Simple dice rolling function
-export function rollDice(sides: number): McpResult {
-  try {
-    const sidesSchema = z.number().int().min(2).max(100);
-    const validatedSides = sidesSchema.parse(sides);
-
-    const value = 1 + Math.floor(Math.random() * validatedSides);
-
-    return {
-      success: true,
-      data: {
-        result: value,
-        sides: validatedSides,
-        message: `Rolled ${value} on ${validatedSides}-sided die`,
-      },
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error instanceof Error ? error.message : "Invalid input",
-    };
-  }
+function getFAQText(question: string): string {
+  return (
+    FAQ_TEXT.find((faq) =>
+      faq.question.toLowerCase().includes(question.toLowerCase())
+    )?.answer || "No FAQ found"
+  );
 }
 
-// Simple random string generator
-export function generateRandomString(
-  length: number,
-  includeNumbers = true,
-  includeSymbols = false
-): McpResult {
-  try {
-    const lengthSchema = z.number().int().min(1).max(100);
-    const validatedLength = lengthSchema.parse(length);
-
-    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    if (includeNumbers) chars += "0123456789";
-    if (includeSymbols) chars += "!@#$%^&*()_+-=[]{}|;:,.<>?";
-
-    let result = "";
-    for (let i = 0; i < validatedLength; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-
-    return {
-      success: true,
-      data: {
-        result,
-        length: validatedLength,
-        includeNumbers,
-        includeSymbols,
-      },
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error instanceof Error ? error.message : "Invalid input",
-    };
-  }
-}
-
-// Simple timestamp function
-export function getTimestamp(
-  format: "iso" | "unix" | "readable" = "iso"
-): McpResult {
-  try {
-    const formatSchema = z.enum(["iso", "unix", "readable"]);
-    const validatedFormat = formatSchema.parse(format);
-
-    const now = new Date();
-    let timestamp: string | number;
-
-    switch (validatedFormat) {
-      case "unix":
-        timestamp = Math.floor(now.getTime() / 1000);
-        break;
-      case "readable":
-        timestamp = now.toLocaleString();
-        break;
-      default:
-        timestamp = now.toISOString();
-    }
-
-    return {
-      success: true,
-      data: {
-        timestamp,
-        format: validatedFormat,
-        raw: now.getTime(),
-      },
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error instanceof Error ? error.message : "Invalid format",
-    };
-  }
-}
-
-// Server info function
-export function getServerInfo(): McpResult {
+export function getFAQ(): McpResult {
+  const all_text = FAQ_TEXT.map(
+    (faq) => `Q: ${faq.question}\n\nA: ${faq.answer}`
+  ).join("\n\n");
   return {
     success: true,
-    data: {
-      name: "shredbx-mcp-server",
-      version: "0.1.0",
-      functions: [
-        "rollDice",
-        "generateRandomString",
-        "getTimestamp",
-        "getServerInfo",
-      ],
-      uptime: process.uptime(),
-      nodeVersion: process.version,
-      platform: process.platform,
-    },
+    data: all_text,
   };
+
+  // return {
+  //   success: true,
+  //   data: getFAQText(),
+  // };
 }
 
-// Export all functions as a registry for easy integration
 export const mcpFunctions = {
-  rollDice,
-  generateRandomString,
-  getTimestamp,
-  getServerInfo,
+  getFAQ,
 };
-
-// Default export
-export default mcpFunctions;

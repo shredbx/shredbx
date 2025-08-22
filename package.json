@@ -9,6 +9,7 @@
     "dev:reactbook-web": "PORT=$PORT_REACTBOOK pnpm --filter @shredbx/reactbook-web dev",
     "dev:mcp-server": "pnpm --filter @shredbx/mcp-server dev",
     "build:shared": "pnpm --filter @shredbx/shared build",
+    "build:mcp-server": "pnpm --filter @shredbx/mcp-server build",
     "dev:reactbook": "pnpm --filter @shredbx/reactbook dev",
     "dev:web-only": "PORT_WEB=3000 pnpm dev:web",
     "dev:reactbook-only": "PORT_REACTBOOK=3001 pnpm dev:reactbook-web",

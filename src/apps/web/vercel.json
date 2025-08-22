@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "installCommand": "cd ../../../ && pnpm install",
-  "buildCommand": "cd ../../../ && pnpm build:shared && pnpm --filter @shredbx/web build",
-  "devCommand": "cd ../../../ && pnpm --filter @shredbx/web dev",
-  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/web PACKAGES='src/packages/shared,src/packages/mcp-server' bash src/scripts/ignore-build.sh"
+  "installCommand": "cd ../../ && pnpm install",
+  "buildCommand": "cd ../../ && pnpm build:shared && pnpm --filter @shredbx/web build",
+  "devCommand": "cd ../../ && pnpm --filter @shredbx/web dev",
+  "ignoreCommand": "cd ../../ && APP_PATH=src/apps/web PACKAGES='src/packages/shared,src/packages/mcp-server' bash src/scripts/ignore-build.sh"
 }

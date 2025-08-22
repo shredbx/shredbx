@@ -56,7 +56,7 @@ export function ProjectReference({
                   height={82}
                 />
               </div>
-              <CardTitle className="text-lg group-hover:text-primary transition-colors">
+              <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors">
                 {projectInfo.name}
               </CardTitle>
             </div>

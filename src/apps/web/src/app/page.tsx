@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ThemeSwitcher, ProjectsReferenceCatalog } from "@ui-web";
-// import { PatternPlayTest } from "@/components/patternplay-test";
+import { PatternPlayTest } from "@/components/patternplay-test";
 
 export default function Home() {
   return (
@@ -51,9 +51,9 @@ export default function Home() {
       <footer className="border-t border-border/50 bg-muted/20 mt-auto">
         <ProjectsReferenceCatalog />
 
-        {/* <div className="p-6">
+        <div className="p-6">
           <PatternPlayTest />
-        </div> */}
+        </div>
       </footer>
     </div>
   );

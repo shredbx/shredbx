@@ -7,6 +7,7 @@
     "dev": "turbo dev",
     "dev:all": "turbo dev --parallel",
     "dev:web": "turbo dev --filter=@web",
+    "dev:patternplay": "turbo dev --filter=@patternplay",
     "dev:mcp-server": "turbo dev --filter=@shredbx/mcp-server",
     "test": "turbo test",
     "test:watch": "turbo test --watch",

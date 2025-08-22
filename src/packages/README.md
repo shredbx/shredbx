@@ -75,6 +75,7 @@ src/
 └── packages/
     ├── patternbook/            # PatternBook functionality (renamed from patternbook-core)
     ├── ui-web/                 # Web UI components & utilities (renamed from shredbx-ui-web)
+    ├── patternplay/            # Web/Next.js experiments, demos, and examples
     └── mcp-server/             # MCP server functionality (kept @shredbx/mcp-server)
 ```
 

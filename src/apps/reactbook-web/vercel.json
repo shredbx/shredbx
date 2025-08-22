@@ -4,5 +4,5 @@
   "installCommand": "cd ../../../ && pnpm install",
   "buildCommand": "cd ../../../ && pnpm build:shared && pnpm --filter @shredbx/reactbook-web build",
   "devCommand": "cd ../../../ && pnpm --filter @shredbx/reactbook-web dev",
-  "ignoreCommand": "APP_PATH=src/apps/reactbook-web PACKAGES='packages/shared,packages/mcp-server,packages/patternbook,packages/reactbook' bash scripts/ignore-build.sh"
+  "ignoreCommand": "APP_PATH=src/apps/reactbook-web PACKAGES='packages/shared,packages/mcp-server,packages/patternbook,packages/reactbook' bash $VERCEL_PROJECT_ROOT/scripts/ignore-build.sh"
 }

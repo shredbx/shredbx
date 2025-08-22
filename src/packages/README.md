@@ -25,30 +25,30 @@ This structure keeps builds fast, dependencies clear, and code organized — pre
 
 ## Naming Convention
 
-All packages follow the pattern: `@[domain]-[platform|type]`
+**Core packages use simple names without prefixes or suffixes** for React/Next.js components and business logic.
 
 ### Examples:
 
 ```
-@shredbx-ui-web          # SHREDBX web UI components
-@shredbx-ui-mobile       # SHREDBX mobile UI components
-@shredbx-core            # SHREDBX core business logic
-@shredbx-utils           # SHREDBX shared utilities
-@reactbook-core          # ReactBook core functionality
-@reactbook-ui-web        # ReactBook web UI components
-@patternbook-core        # PatternBook core functionality
+@patternbook             # PatternBook core functionality (no -core suffix)
+@shared-web              # Shared web components & utilities (no -ui-web suffix)
+@web                     # Main Next.js web application
+@mobile                  # React Native mobile application (future)
 ```
 
-### Platform/Type Suffixes:
+### Package Types:
 
-- `-web` — Web-specific implementation
-- `-mobile` — React Native/mobile implementation
-- `-core` — Platform-agnostic business logic
-- `-ui-web` — Web UI components
-- `-ui-mobile` — Mobile UI components
-- `-utils` — Shared utilities
-- `-types` — TypeScript type definitions
-- `-config` — Configuration and constants
+- **Core packages** — No suffixes: `patternbook`, `shared-web`
+- **Platform packages** — Simple names: `web` (Next.js), `mobile` (React Native)
+- **UI components** — Integrated into core packages, not separate packages
+- **Utilities** — Part of core packages, not separate utility packages
+
+### Why This Approach:
+
+- **Simpler naming** — Easier to remember and import
+- **Reduced redundancy** — Core + UI combined in single packages
+- **Clearer boundaries** — One package per domain/functionality
+- **Easier maintenance** — Fewer packages to manage
 
 ---
 
@@ -66,11 +66,30 @@ packages/package-name/
 └── README.md            # Package documentation
 ```
 
+### Simplified Structure (After Refactoring)
+
+```
+src/
+├── apps/
+│   └── web/                    # Single Next.js app (renamed from shredbx-web)
+└── packages/
+    ├── patternbook/            # PatternBook functionality (renamed from patternbook-core)
+    └── shared-web/             # Shared web components & utilities (renamed from shredbx-ui-web)
+```
+
+**Key Changes:**
+
+- **patternbook-core** → **patternbook** (no suffix)
+- **shredbx-ui-web** → **shared-web** (no domain prefix)
+- **shredbx-web** → **web** (simplified app name)
+- **patternbook-ui-web** → **deleted** (merged into patternbook)
+- **shredbx-core** → **deleted** (merged into shared-web)
+
 ### Package.json Template:
 
 ```json
 {
-  "name": "@shredbx-ui-web",
+  "name": "@patternbook",
   "version": "0.1.0",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -84,6 +103,8 @@ packages/package-name/
 }
 ```
 
+**Note**: Package names now use simple names without prefixes or suffixes.
+
 ---
 
 ## Adding Dependencies
@@ -92,10 +113,10 @@ packages/package-name/
 
 ```bash
 # From monorepo root
-pnpm --filter @shredbx/web add @shredbx-ui-web
+pnpm --filter @web add @shared-web
 
 # From app directory
-cd src/apps/web && pnpm add @shredbx-ui-web
+cd src/apps/web && pnpm add @shared-web
 ```
 
 ### Add external package to specific app:
@@ -114,7 +135,7 @@ When adding package dependencies to an app, **update the app's `vercel.json`** t
 
 ```json
 {
-  "ignoreCommand": "APP_PATH=src/apps/web PACKAGES='packages/shredbx-ui-web,packages/shredbx-core,packages/mcp-server' bash scripts/ignore-build.sh"
+  "ignoreCommand": "APP_PATH=src/apps/web PACKAGES='packages/shared-web,packages/patternbook,packages/mcp-server' bash scripts/ignore-build.sh"
 }
 ```
 
@@ -181,11 +202,11 @@ pnpm -r version patch
 
 ## Examples
 
-### Creating a new UI package:
+### Creating a new core package:
 
 ```bash
-mkdir packages/shredbx-ui-mobile
-cd packages/shredbx-ui-mobile
+mkdir packages/patternbook
+cd packages/patternbook
 pnpm init
 # Configure package.json with correct name and exports
 ```
@@ -194,13 +215,13 @@ pnpm init
 
 ```bash
 # Add dependency
-pnpm --filter @shredbx/web add @shredbx-ui-web
+pnpm --filter @web add @shared-web
 
 # Update vercel.json
-# Add 'packages/shredbx-ui-web' to PACKAGES list
+# Add 'packages/shared-web' to PACKAGES list
 
 # Import in code
-import { Button } from '@shredbx-ui-web'
+import { Button } from '@shared-web'
 ```
 
 ---
@@ -208,6 +229,8 @@ import { Button } from '@shredbx-ui-web'
 ## Anti-patterns
 
 - **Avoid**: Catch-all "shared" or "common" packages that everything depends on
-- **Avoid**: Platform-agnostic UI packages (web and mobile UI are fundamentally different)
+- **Avoid**: Separate UI packages (UI components should be integrated into core packages)
 - **Avoid**: Circular dependencies between packages
 - **Avoid**: Forgetting to update `vercel.json` after adding dependencies
+- **Avoid**: Using prefixes or suffixes in core package names (use simple names like `patternbook`, not `@patternbook/core`)
+- **Avoid**: Creating separate packages for utilities that could be part of core packages

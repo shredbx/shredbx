@@ -34,14 +34,14 @@ export function ProjectReference({
   return (
     <Card
       className={cn(
-        "group hover:shadow-lg transition-all duration-200 w-full h-full  flex flex-col",
+        "group  hover:shadow-lg transition-all duration-200 w-full h-full  flex flex-col",
         className
       )}
     >
       <a
         href={projectInfo.url}
         rel="noopener noreferrer"
-        className="block cursor-pointer flex-1 flex-col"
+        className="block cursor-pointer flex-1 flex-col group-hover:opacity-80 transition-opacity duration-150 "
       >
         <CardHeader className="pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -56,11 +56,11 @@ export function ProjectReference({
                   height={82}
                 />
               </div>
-              <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors">
+              <CardTitle className="text-lg font-bold ">
                 {projectInfo.name}
               </CardTitle>
             </div>
-            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+            <ExternalLink className="w-4 h-4 text-muted-foreground transition-colors" />
           </div>
         </CardHeader>
 

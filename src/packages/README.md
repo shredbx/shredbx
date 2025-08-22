@@ -31,14 +31,14 @@ This structure keeps builds fast, dependencies clear, and code organized — pre
 
 ```
 @patternbook             # PatternBook core functionality (no -core suffix)
-@shared-web              # Shared web components & utilities (no -ui-web suffix)
+@ui-web                  # Web UI components & utilities (standard naming)
 @web                     # Main Next.js web application
 @mobile                  # React Native mobile application (future)
 ```
 
 ### Package Types:
 
-- **Core packages** — No suffixes: `patternbook`, `shared-web`
+- **Core packages** — No suffixes: `patternbook`, `ui-web`
 - **Platform packages** — Simple names: `web` (Next.js), `mobile` (React Native)
 - **UI components** — Integrated into core packages, not separate packages
 - **Utilities** — Part of core packages, not separate utility packages
@@ -66,7 +66,7 @@ packages/package-name/
 └── README.md            # Package documentation
 ```
 
-### Simplified Structure (After Refactoring)
+### Current Structure (After Refactoring)
 
 ```
 src/
@@ -74,16 +74,18 @@ src/
 │   └── web/                    # Single Next.js app (renamed from shredbx-web)
 └── packages/
     ├── patternbook/            # PatternBook functionality (renamed from patternbook-core)
-    └── shared-web/             # Shared web components & utilities (renamed from shredbx-ui-web)
+    ├── ui-web/                 # Web UI components & utilities (renamed from shredbx-ui-web)
+    └── mcp-server/             # MCP server functionality (kept @shredbx/mcp-server)
 ```
 
-**Key Changes:**
+**Key Changes Completed:**
 
-- **patternbook-core** → **patternbook** (no suffix)
-- **shredbx-ui-web** → **shared-web** (no domain prefix)
-- **shredbx-web** → **web** (simplified app name)
-- **patternbook-ui-web** → **deleted** (merged into patternbook)
-- **shredbx-core** → **deleted** (merged into shared-web)
+- ✅ **patternbook-core** → **patternbook** (no suffix)
+- ✅ **shredbx-ui-web** → **ui-web** (standard naming)
+- ✅ **shredbx-web** → **web** (simplified app name)
+- ✅ **patternbook-ui-web** → **deleted** (merged into patternbook)
+- ✅ **shredbx-core** → **deleted** (merged into ui-web)
+- ✅ **@shredbx/mcp-server** → **@shredbx/mcp-server** (kept domain prefix and descriptive name)
 
 ### Package.json Template:
 
@@ -113,16 +115,16 @@ src/
 
 ```bash
 # From monorepo root
-pnpm --filter @web add @shared-web
+pnpm --filter @web add @ui-web
 
 # From app directory
-cd src/apps/web && pnpm add @shared-web
+cd src/apps/web && pnpm add @ui-web
 ```
 
 ### Add external package to specific app:
 
 ```bash
-pnpm --filter @shredbx/web add react-query
+pnpm --filter @web add react-query
 ```
 
 ---
@@ -135,7 +137,7 @@ When adding package dependencies to an app, **update the app's `vercel.json`** t
 
 ```json
 {
-  "ignoreCommand": "APP_PATH=src/apps/web PACKAGES='packages/shared-web,packages/patternbook,packages/mcp-server' bash scripts/ignore-build.sh"
+  "ignoreCommand": "APP_PATH=src/apps/web PACKAGES='packages/ui-web,packages/patternbook,packages/mcp-server' bash scripts/ignore-build.sh"
 }
 ```
 
@@ -218,10 +220,10 @@ pnpm init
 pnpm --filter @web add @shared-web
 
 # Update vercel.json
-# Add 'packages/shared-web' to PACKAGES list
+# Add 'packages/ui-web' to PACKAGES list
 
 # Import in code
-import { Button } from '@shared-web'
+import { Button } from '@ui-web'
 ```
 
 ---

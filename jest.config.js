@@ -7,7 +7,7 @@ module.exports = {
   ],
   moduleNameMapping: {
     "^@/(.*)$": "<rootDir>/src/$1",
-    "^@shredbx/(.*)$": "<rootDir>/src/packages/shredbx-$1/src",
+    "^@ui-web/(.*)$": "<rootDir>/src/packages/ui-web/src",
     "^@patternbook/(.*)$": "<rootDir>/src/packages/patternbook-$1/src",
   },
   transform: {

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shredbx/*": ["src/packages/shredbx-*/src"],
+      "@patternbook/*": ["src/packages/patternbook-*/src"]
+    }
+  },
+  "references": [
+    { "path": "./src/packages/shredbx-core" },
+    { "path": "./src/packages/shredbx-ui-web" },
+    { "path": "./src/packages/patternbook-core" },
+    { "path": "./src/packages/patternbook-ui-web" }
+  ],
+  "include": ["src/packages/*/src/**/*", "src/apps/*/src/**/*"],
+  "exclude": ["node_modules", "dist", ".next"]
+}

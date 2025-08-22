@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "framework": "nextjs",
-  "installCommand": "cd ../../../ && pnpm install",
-  "buildCommand": "cd ../../../ && pnpm build:shared && pnpm build:mcp-server && pnpm --filter @shredbx/reactbook-web build",
-  "devCommand": "cd ../../../ && pnpm --filter @shredbx/reactbook-web dev",
-  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/reactbook-web PACKAGES='src/packages/shared,src/packages/mcp-server,src/packages/patternbook,src/packages/reactbook' bash src/scripts/ignore-build.sh"
-}

@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "installCommand": "cd ../../../ && pnpm install",
+  "buildCommand": "cd ../../../ && turbo build --filter=@shredbx/web",
+  "devCommand": "cd ../../../ && turbo dev --filter=@shredbx/web",
+  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/shredbx-web PACKAGES='src/packages/shredbx-core,src/packages/shredbx-ui-web,src/packages/mcp-server' bash src/scripts/ignore-build.sh"
+}

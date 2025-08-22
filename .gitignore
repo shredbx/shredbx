@@ -11,7 +11,7 @@ docs/brainstorm
 node_modules
 .pnp
 .pnp.*
-
+.turbo
 # Package manager logs
 npm-debug.log*
 yarn-debug.log*

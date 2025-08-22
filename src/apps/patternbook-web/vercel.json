@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "installCommand": "cd ../../../ && pnpm install",
+  "buildCommand": "cd ../../../ && turbo build --filter=@shredbx/patternbook-web",
+  "devCommand": "cd ../../../ && turbo dev --filter=@shredbx/patternbook-web",
+  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/patternbook-web PACKAGES='src/packages/shredbx-core,src/packages/shredbx-ui-web,src/packages/mcp-server,src/packages/patternbook-core,src/packages/patternbook-ui-web' bash src/scripts/ignore-build.sh"
+}

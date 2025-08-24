@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { ThemeSwitcher, ProjectsReferenceCatalog } from "@ui-web";
+import { typesPlaceholder } from "@reactbook/playground/patternbook";
+
 // import { PlaygroundTest } from "@/components/playground-test";
 export default function Home() {
+  console.log("Test patternbook import: ", typesPlaceholder);
   return (
     <div className="min-h-screen flex flex-col space-y-4 md:space-y-0 bg-gradient-to-b from-background to-background/50">
       {/* Navbar */}

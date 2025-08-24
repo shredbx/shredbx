@@ -14,6 +14,11 @@
       "import": "./dist/mcp/server/index.js",
       "require": "./dist/mcp/server/index.cjs",
       "types": "./dist/mcp/server/index.d.ts"
+    },
+    "./patternbook": {
+      "import": "./dist/patternbook/index.js",
+      "require": "./dist/patternbook/index.cjs",
+      "types": "./dist/patternbook/index.d.ts"
     }
   },
   "scripts": {

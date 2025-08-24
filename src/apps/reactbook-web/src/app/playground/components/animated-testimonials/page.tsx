@@ -16,7 +16,7 @@ export default function Page() {
   );
 }
 
-export function AnimatedTestimonialsDemo() {
+function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:

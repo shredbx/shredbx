@@ -21,7 +21,7 @@ export default function Page() {
   );
 }
 
-export function AppleCardsCarouselDemo() {
+function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
     <div key={card.src} className="w-full h-full">
       <AppleCard card={card} index={index} />

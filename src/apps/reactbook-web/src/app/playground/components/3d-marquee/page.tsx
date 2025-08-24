@@ -9,7 +9,7 @@ export default function Page() {
   );
 }
 
-export function ThreeDMarqueeDemo() {
+function ThreeDMarqueeDemo() {
   const images = [
     "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
     "https://assets.aceternity.com/animated-modal.png",

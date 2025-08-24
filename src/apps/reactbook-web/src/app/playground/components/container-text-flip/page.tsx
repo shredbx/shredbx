@@ -17,7 +17,8 @@ export default function Page() {
     </div>
   );
 }
-export function ContainerTextFlipDemo() {
+
+function ContainerTextFlipDemo() {
   const words = ["better", "modern", "beautiful", "awesome"];
   return (
     <motion.h1

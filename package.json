@@ -6,8 +6,6 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:all": "turbo dev --parallel",
-    "dev:web": "turbo dev --filter=@web",
-    "dev:playground": "turbo dev --filter=@reactbook/playground",
     "test": "turbo test",
     "test:watch": "turbo test --watch",
     "test:coverage": "turbo test --coverage",

@@ -12,7 +12,9 @@ export default function Page() {
           ...
         </div>
       >
-        <ContainerTextFlipDemo />
+        <div className="mx-auto ">
+          <ContainerTextFlipDemo />
+        </div>
       </ClientOnly>
     </div>
   );

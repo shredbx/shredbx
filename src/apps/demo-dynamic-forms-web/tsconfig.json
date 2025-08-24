@@ -1,6 +1,7 @@
 {
   "extends": "../../../configs/typescript-config/tsconfig.nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@cms-data/*": ["./src/packages/cms-data/*"],
       "@cms/*": ["./src/packages/cms/*"],

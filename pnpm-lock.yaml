@@ -380,6 +380,9 @@ importers:
       '@reactbook/shared-ui-deps':
         specifier: workspace:*
         version: link:../../../configs/shared-ui-deps
+      '@reactbook/ui-web':
+        specifier: workspace:*
+        version: link:../ui-web
       react:
         specifier: ^19.1.0
         version: 19.1.1

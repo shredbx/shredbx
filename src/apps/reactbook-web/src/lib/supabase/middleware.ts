@@ -20,22 +20,23 @@ export async function updateSession(request: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY!,
     {
       cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value),
-          );
+        get: (name: string) => request.cookies.get(name)?.value,
+        set: (name: string, value: string, options?: object) => {
+          request.cookies.set(name, value);
           supabaseResponse = NextResponse.next({
             request,
           });
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options),
-          );
+          supabaseResponse.cookies.set(name, value, options);
+        },
+        remove: (name: string, _options?: object) => {
+          request.cookies.delete(name);
+          supabaseResponse = NextResponse.next({
+            request,
+          });
+          supabaseResponse.cookies.delete(name);
         },
       },
-    },
+    }
   );
 
   // Do not run code between createServerClient and

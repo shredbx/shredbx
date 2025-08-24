@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@reactbook/shared-deps": "workspace:*",
-    "@reactbook/shared-ui-deps": "workspace:*"
+    "@reactbook/shared-ui-deps": "workspace:*",
+    "@reactbook/ui-web": "workspace:*"
   },
   "devDependencies": {
     "@reactbook/typescript-config": "workspace:*"

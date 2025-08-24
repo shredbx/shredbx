@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   transpilePackages: [
@@ -24,6 +25,13 @@ const nextConfig: NextConfig = {
       ...config.experiments,
       futureDefaults: false,
     };
+
+    // Add path resolution aliases
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "./src"),
+    };
+
     return config;
   },
 };

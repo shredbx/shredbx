@@ -19,13 +19,15 @@
     "baseUrl": ".",
     "paths": {
       "@ui-web/*": ["src/packages/ui-web/src"],
-      "@patternbook/*": ["src/packages/patternbook-*/src"]
+      "@patternbook/*": ["src/packages/patternbook-*/src"],
+      "@playground/*": ["src/packages/playground/src"],
+      "@playground/mcp/server": ["src/packages/playground/src/mcp/server"],
+      "@playground/mcp/server/*": ["src/packages/playground/src/mcp/server/*"]
     }
   },
   "references": [
     { "path": "./src/packages/ui-web" },
     { "path": "./src/packages/patternbook" },
-    { "path": "./src/packages/mcp-server" },
     { "path": "./src/packages/playground" }
   ],
   "include": ["src/packages/*/src/**/*", "src/apps/*/src/**/*"],

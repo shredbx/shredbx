@@ -9,7 +9,7 @@ export default function PlaygroundPage() {
   );
 }
 
-export function References() {
+function References() {
   return (
     <div className="flex flex-col gap-4">
       <h1>Components</h1>

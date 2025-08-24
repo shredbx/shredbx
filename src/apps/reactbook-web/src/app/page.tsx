@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ThemeSwitcher, ProjectsReferenceCatalog } from "@reactbook/ui-web";
 import { typesPlaceholder } from "@reactbook/playground/patternbook";
+import Link from "next/link";
 
 // import { PlaygroundTest } from "@/components/playground-test";
 export default function Home() {
@@ -32,20 +33,23 @@ export default function Home() {
       {/* Main content area */}
       <main className=" flex justify-center items-center px-6 md:px-12 mt-4">
         {/* Main content */}
-        <div className="text-center space-y-4 py-8">
+        <div className="text-center flex flex-col space-y-4 py-8">
           <h1 className="text-4xl font-bold">ReactBook</h1>
           <p className="text-lg text-muted-foreground font-medium">
             React / Next.js knowledgebase
           </p>
-          <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
+          <div className="inline-flex mx-auto items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
             <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
             <span className="text-sm text-muted-foreground">
               coming soon...
             </span>
           </div>
-          {/* <PlaygroundTest /> */}
+          <Link href="/playground" className="text-primary text-sm">
+            Playground / Components
+          </Link>
         </div>
       </main>
+
       {/* Footer with projects catalog */}
       <footer className="border-t border-border/50 bg-muted/20 mt-auto flex px-12">
         <ProjectsReferenceCatalog />

@@ -25,7 +25,6 @@
   "references": [
     { "path": "./src/packages/ui-web" },
     { "path": "./src/packages/patternbook" },
-    { "path": "./src/packages/mcp-server" },
     { "path": "./src/packages/playground" }
   ],
   "include": ["src/packages/*/src/**/*", "src/apps/*/src/**/*"],

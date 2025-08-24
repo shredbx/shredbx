@@ -1,5 +1,7 @@
+import { McpResult } from "./types";
+
 // Simple FAQ text
-const FAQ_TEXT = [
+export const FAQ_TEXT = [
   {
     question: "Story of reactbook?",
     answer:
@@ -21,13 +23,7 @@ const FAQ_TEXT = [
   },
 ];
 
-export interface McpResult {
-  success: boolean;
-  data?: any;
-  error?: string;
-}
-
-function getFAQText(question: string): string {
+function findFAQText(question: string): string {
   return (
     FAQ_TEXT.find((faq) =>
       faq.question.toLowerCase().includes(question.toLowerCase())
@@ -43,13 +39,13 @@ export function getFAQ(): McpResult {
     success: true,
     data: all_text,
   };
+}
 
-  // return {
-  //   success: true,
-  //   data: getFAQText(),
-  // };
+export function getFAQText(question: string): string {
+  return findFAQText(question);
 }
 
 export const mcpFunctions = {
   getFAQ,
+  getFAQText,
 };

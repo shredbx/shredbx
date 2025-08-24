@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ThemeSwitcher, ProjectsReferenceCatalog } from "@ui-web";
-
+import { PlaygroundTest } from "@/components/playground-test";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col space-y-4 md:space-y-0 bg-gradient-to-b from-background to-background/50">
@@ -40,6 +40,7 @@ export default function Home() {
               coming soon...
             </span>
           </div>
+          <PlaygroundTest />
         </div>
       </main>
       {/* Footer with projects catalog */}

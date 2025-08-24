@@ -4,6 +4,18 @@
   "private": true,
   "main": "./src/index.ts",
   "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./mcp/server": {
+      "import": "./dist/mcp/server/index.js",
+      "require": "./dist/mcp/server/index.cjs",
+      "types": "./dist/mcp/server/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

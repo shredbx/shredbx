@@ -1,4 +1,4 @@
-import { patternplayGreeting, Button } from "@playground";
+import { patternplayGreeting, Button } from "@reactbook/playground";
 
 export function PlaygroundTest() {
   return (

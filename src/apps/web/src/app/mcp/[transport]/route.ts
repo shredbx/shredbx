@@ -1,6 +1,6 @@
-import { getFAQ } from "@reactbook/mcp-server";
 import { createMcpHandler } from "@vercel/mcp-adapter";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { getFAQ } from "@reactbook/playground/mcp/server";
 
 const handler = createMcpHandler(
   (server: McpServer) => {

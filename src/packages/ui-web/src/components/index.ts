@@ -1,50 +1,8 @@
-export { ProjectReference } from "./project-reference";
-export { ProjectsReferenceCatalog } from "./projects-reference-catalog";
-export { ThemeSwitcher } from "./theme-switcher";
+export * from "./ui";
+export * from "./project-reference";
+export * from "./projects-reference-catalog";
+export * from "./theme-switcher";
+export * from "./client-only";
 
 // OpenGraph components
-export {
-  createOpenGraphImageJSX,
-  OG_IMAGE_SIZE,
-  OG_IMAGE_CONTENT_TYPE,
-  OG_IMAGE_RUNTIME,
-} from "./opengraph-image";
-
-// UI Components
-export {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-export { Badge, badgeVariants } from "./ui/badge";
-export { Button, buttonVariants } from "./ui/button";
-export { Checkbox } from "./ui/checkbox";
-export {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuCheckboxItem,
-  DropdownMenuRadioItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuGroup,
-  DropdownMenuPortal,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuRadioGroup,
-} from "./ui/dropdown-menu";
-export { Input } from "./ui/input";
-export { Label } from "./ui/label";
-export { Toggle, toggleVariants } from "./ui/toggle";
-export {
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-  TooltipProvider,
-} from "./ui/tooltip";
+export * from "./opengraph-image";

@@ -10,9 +10,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Button } from "./ui/button";
-import { AnimatedImage } from "./animated-image";
+} from "./ui/shadcn/card";
+import { Button } from "./ui/shadcn/button";
+import { AnimatedImage } from "./ui/animated-image";
 
 interface ProjectReferenceProps {
   project: ProjectType;

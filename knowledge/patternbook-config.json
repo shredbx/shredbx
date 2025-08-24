@@ -1,0 +1,278 @@
+{
+  "$schema": "https://patternbook.dev/schema.json",
+  "name": "ReactBook Monorepo Knowledge Base",
+  "description": "Comprehensive documentation for ReactBook monorepo architecture, workflows, and best practices",
+  "version": "1.0.0",
+  "categories": [
+    {
+      "id": "architecture",
+      "name": "Architecture & Setup",
+      "description": "Core architecture documentation and setup guides",
+      "icon": "🏗️",
+      "documents": [
+        {
+          "id": "monorepo-overview",
+          "title": "Monorepo Architecture",
+          "path": "./monorepo/README.md",
+          "tags": ["architecture", "setup", "overview"],
+          "difficulty": "beginner",
+          "type": "guide"
+        },
+        {
+          "id": "architecture-decisions",
+          "title": "Architecture Decisions",
+          "path": "./articles/monorepo-architecture-decisions.md",
+          "tags": ["architecture", "decisions", "rationale"],
+          "difficulty": "intermediate",
+          "type": "article"
+        },
+        {
+          "id": "typescript-strategy",
+          "title": "TypeScript Configuration Strategy",
+          "path": "./articles/typescript-configuration-strategy.md",
+          "tags": ["typescript", "configuration", "strategy"],
+          "difficulty": "intermediate",
+          "type": "article"
+        }
+      ]
+    },
+    {
+      "id": "workflows",
+      "name": "Development Workflows",
+      "description": "Step-by-step guides for common development tasks",
+      "icon": "🎯",
+      "documents": [
+        {
+          "id": "add-new-app",
+          "title": "Adding New Next.js App",
+          "path": "./useCases/add-new-app.md",
+          "tags": ["nextjs", "app", "setup", "workflow"],
+          "difficulty": "beginner",
+          "type": "workflow",
+          "estimatedTime": "15-30 minutes"
+        },
+        {
+          "id": "add-new-package",
+          "title": "Adding New Package",
+          "path": "./useCases/add-new-package.md",
+          "tags": ["package", "typescript", "setup", "workflow"],
+          "difficulty": "beginner",
+          "type": "workflow",
+          "estimatedTime": "10-20 minutes"
+        },
+        {
+          "id": "add-package-to-app",
+          "title": "Adding Package Dependencies",
+          "path": "./useCases/add-package-to-app.md",
+          "tags": ["dependencies", "workspace", "integration"],
+          "difficulty": "beginner",
+          "type": "workflow",
+          "estimatedTime": "5-10 minutes"
+        },
+        {
+          "id": "add-shadcn-shared",
+          "title": "Adding shadcn/ui to Shared UI",
+          "path": "./useCases/add-shadcn-to-shared-ui.md",
+          "tags": ["shadcn", "ui", "shared", "components"],
+          "difficulty": "intermediate",
+          "type": "workflow",
+          "estimatedTime": "20-40 minutes"
+        },
+        {
+          "id": "add-shadcn-app",
+          "title": "Adding shadcn/ui to Specific App",
+          "path": "./useCases/add-shadcn-to-app.md",
+          "tags": ["shadcn", "ui", "app-specific", "components"],
+          "difficulty": "intermediate",
+          "type": "workflow",
+          "estimatedTime": "15-30 minutes"
+        }
+      ]
+    },
+    {
+      "id": "ui-design",
+      "name": "UI & Design System",
+      "description": "Component organization and design system patterns",
+      "icon": "🎨",
+      "documents": [
+        {
+          "id": "shadcn-strategy",
+          "title": "shadcn/ui Component Strategy",
+          "path": "./articles/shadcn-component-strategy.md",
+          "tags": ["shadcn", "components", "strategy", "design-system"],
+          "difficulty": "intermediate",
+          "type": "article"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Development Tools",
+      "description": "Tools, scripts, and automation documentation",
+      "icon": "🔧",
+      "documents": [
+        {
+          "id": "tools-overview",
+          "title": "Tools & Scripts Overview",
+          "path": "./tools/README.md",
+          "tags": ["tools", "automation", "development"],
+          "difficulty": "beginner",
+          "type": "guide"
+        }
+      ]
+    }
+  ],
+  "tags": {
+    "architecture": {
+      "label": "Architecture",
+      "color": "#3B82F6",
+      "description": "Core architecture and design decisions"
+    },
+    "nextjs": {
+      "label": "Next.js",
+      "color": "#000000",
+      "description": "Next.js application development"
+    },
+    "typescript": {
+      "label": "TypeScript",
+      "color": "#3178C6",
+      "description": "TypeScript configuration and usage"
+    },
+    "shadcn": {
+      "label": "shadcn/ui",
+      "color": "#1E293B",
+      "description": "shadcn/ui component library"
+    },
+    "workflow": {
+      "label": "Workflow",
+      "color": "#10B981",
+      "description": "Step-by-step process documentation"
+    },
+    "setup": {
+      "label": "Setup",
+      "color": "#F59E0B",
+      "description": "Initial setup and configuration"
+    },
+    "components": {
+      "label": "Components",
+      "color": "#8B5CF6",
+      "description": "UI component development"
+    },
+    "dependencies": {
+      "label": "Dependencies",
+      "color": "#EF4444",
+      "description": "Package and dependency management"
+    },
+    "tools": {
+      "label": "Tools",
+      "color": "#6B7280",
+      "description": "Development tools and automation"
+    }
+  },
+  "searchIndex": {
+    "commonQueries": [
+      {
+        "query": "How to add a new app",
+        "documentId": "add-new-app",
+        "relevance": 1.0
+      },
+      {
+        "query": "Create shared package",
+        "documentId": "add-new-package",
+        "relevance": 1.0
+      },
+      {
+        "query": "Setup shadcn components",
+        "documentId": "add-shadcn-shared",
+        "relevance": 0.9
+      },
+      {
+        "query": "TypeScript configuration",
+        "documentId": "typescript-strategy",
+        "relevance": 1.0
+      },
+      {
+        "query": "Package dependencies",
+        "documentId": "add-package-to-app",
+        "relevance": 1.0
+      },
+      {
+        "query": "Monorepo setup",
+        "documentId": "monorepo-overview",
+        "relevance": 1.0
+      },
+      {
+        "query": "Why this architecture",
+        "documentId": "architecture-decisions",
+        "relevance": 1.0
+      },
+      {
+        "query": "Component strategy",
+        "documentId": "shadcn-strategy",
+        "relevance": 1.0
+      }
+    ],
+    "keyTerms": [
+      "monorepo",
+      "Next.js",
+      "TypeScript",
+      "shadcn/ui",
+      "PNPM",
+      "Turbo",
+      "workspace",
+      "package",
+      "app",
+      "component",
+      "shared",
+      "configuration",
+      "build",
+      "development"
+    ]
+  },
+  "navigation": {
+    "quickStart": [
+      {
+        "title": "New Team Member",
+        "description": "Get started with the monorepo",
+        "steps": [
+          {
+            "title": "Understand Architecture",
+            "documentId": "monorepo-overview"
+          },
+          {
+            "title": "Learn Workflows",
+            "documentId": "add-package-to-app"
+          }
+        ]
+      },
+      {
+        "title": "Add New Feature",
+        "description": "Create new apps or packages",
+        "steps": [
+          {
+            "title": "Create Package",
+            "documentId": "add-new-package"
+          },
+          {
+            "title": "Setup UI Components",
+            "documentId": "add-shadcn-shared"
+          }
+        ]
+      }
+    ],
+    "byTechnology": {
+      "Next.js": ["add-new-app", "monorepo-overview"],
+      "TypeScript": ["typescript-strategy", "add-new-package"],
+      "shadcn/ui": ["add-shadcn-shared", "add-shadcn-app", "shadcn-strategy"],
+      "PNPM": ["architecture-decisions", "tools-overview"],
+      "Turbo": ["tools-overview", "architecture-decisions"]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2024-01-01",
+    "maintainers": ["ReactBook Team"],
+    "repository": "https://github.com/reactbook/reactbook",
+    "license": "MIT",
+    "patternbookVersion": "1.0.0"
+  }
+}

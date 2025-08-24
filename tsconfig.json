@@ -2,6 +2,12 @@
   "extends": "./configs/typescript-config/tsconfig.base.json",
   "compilerOptions": {
     "paths": {
+      /**
+       * What this does:
+       * - When TypeScript sees import { Button } from "@reactbook/ui-web/components"
+       * - It translates to: src/packages/ui-web/src/components
+       * - This is compile-time module resolution - tells TS where to find files
+       */
       "@reactbook/ui-web/*": ["src/packages/ui-web/src/*"],
       "@reactbook/playground/*": ["src/packages/playground/src/*"],
       "@reactbook/shared-deps": ["configs/shared-deps"],
@@ -11,14 +17,18 @@
     }
   },
   "references": [
-    // { "path": "./configs/shared-deps" },
-    // { "path": "./configs/shared-ui-deps" },
-    // { "path": "./configs/typescript-config" },
-    // { "path": "./configs/eslint-config" },
+    /**
+     * What this does:
+     * - Tells TypeScript these are separate sub-projects
+     * - Each referenced path must have its own tsconfig.json
+     * - Enables incremental compilation and proper build ordering
+     * - TypeScript will build dependencies first
+     */
+    { "path": "./configs/typescript-config" },
     { "path": "./src/packages/ui-web" },
-    { "path": "./src/packages/playground" }
-    // { "path": "./src/apps/reactbook-web" },
-    // { "path": "./src/apps/demo-dynamic-forms-web" }
+    { "path": "./src/packages/playground" },
+    { "path": "./src/apps/reactbook-web" },
+    { "path": "./src/apps/demo-dynamic-forms-web" }
   ],
   "include": [
     "src/packages/*/src/**/*",

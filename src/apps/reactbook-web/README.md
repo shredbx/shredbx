@@ -1,4 +1,4 @@
-# @reactbook/web v0.0.1
+# @reactbook/reactbook-web v0.0.1
 
 ## What & Why
 

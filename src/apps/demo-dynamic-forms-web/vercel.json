@@ -2,12 +2,6 @@
   "version": 2,
   "framework": "nextjs",
   "installCommand": "cd ../../../ && pnpm install",
-  "buildCommand": "cd ../../../ && pnpm turbo build --filter=@reactbook/demo-dynamic-forms-web",
-  "devCommand": "cd ../../../ && pnpm turbo dev --filter=@reactbook/demo-dynamic-forms-web",
-  "outputDirectory": ".next",
-  "images": {
-    "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    "domains": [],
-    "minimumCacheTTL": 60
-  }
+  "buildCommand": "cd ../../../ && turbo build --filter=@reactbook/demo-dynamic-forms-web",
+  "devCommand": "cd ../../../ && turbo dev --filter=@reactbook/demo-dynamic-forms-web"
 }

@@ -32,7 +32,7 @@ This structure keeps builds fast, dependencies clear, and code organized — pre
 ```
 @patternbook             # PatternBook core functionality (no -core suffix)
 @reactbook/ui-web                  # Web UI components & utilities (standard naming)
-@web                     # Main Next.js web application
+@reactbook-web           # Main Next.js web application
 @mobile                  # React Native mobile application (future)
 ```
 
@@ -116,16 +116,16 @@ src/
 
 ```bash
 # From monorepo root
-pnpm --filter @web add @reactbook/ui-web
+pnpm --filter @reactbook-web add @reactbook/ui-web
 
 # From app directory
-cd src/apps/web && pnpm add @reactbook/ui-web
+cd src/apps/reactbook-web && pnpm add @reactbook/ui-web
 ```
 
 ### Add external package to specific app:
 
 ```bash
-pnpm --filter @web add react-query
+pnpm --filter @reactbook-web add react-query
 ```
 
 ---
@@ -134,11 +134,11 @@ pnpm --filter @web add react-query
 
 When adding package dependencies to an app, **update the app's `vercel.json`** to include the new packages in the ignore command:
 
-### Example for web app (`src/apps/web/vercel.json`):
+### Example for reactbook-web app (`src/apps/reactbook-web/vercel.json`):
 
 ```json
 {
-  "ignoreCommand": "APP_PATH=src/apps/web PACKAGES='packages/ui-web,packages/patternbook,packages/mcp-server' bash scripts/ignore-build.sh"
+  "ignoreCommand": "APP_PATH=src/apps/reactbook-web PACKAGES='packages/ui-web,packages/patternbook,packages/mcp-server' bash scripts/ignore-build.sh"
 }
 ```
 
@@ -218,7 +218,7 @@ pnpm init
 
 ```bash
 # Add dependency
-pnpm --filter @web add @shared-web
+pnpm --filter @reactbook-web add @shared-web
 
 # Update vercel.json
 # Add 'packages/ui-web' to PACKAGES list

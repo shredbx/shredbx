@@ -1,5 +1,5 @@
 {
-  "name": "shredbx",
+  "name": "reactbook",
   "version": "1.0.0",
   "private": false,
   "scripts": {
@@ -7,8 +7,8 @@
     "dev": "turbo dev",
     "dev:all": "turbo dev --parallel",
     "dev:web": "turbo dev --filter=@web",
-    "dev:patternplay": "turbo dev --filter=@patternplay",
-    "dev:mcp-server": "turbo dev --filter=@shredbx/mcp-server",
+    "dev:playground": "turbo dev --filter=@playground",
+    "dev:mcp-server": "turbo dev --filter=@reactbook/mcp-server",
     "test": "turbo test",
     "test:watch": "turbo test --watch",
     "test:coverage": "turbo test --coverage",

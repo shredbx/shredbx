@@ -26,7 +26,7 @@
     { "path": "./src/packages/ui-web" },
     { "path": "./src/packages/patternbook" },
     { "path": "./src/packages/mcp-server" },
-    { "path": "./src/packages/patternplay" }
+    { "path": "./src/packages/playground" }
   ],
   "include": ["src/packages/*/src/**/*", "src/apps/*/src/**/*"],
   "exclude": ["node_modules", "dist", ".next"]

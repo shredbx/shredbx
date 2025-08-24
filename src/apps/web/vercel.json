@@ -4,5 +4,5 @@
   "installCommand": "cd ../../../ && pnpm install",
   "buildCommand": "cd ../../../ && turbo build --filter=@web",
   "devCommand": "cd ../../../ && turbo dev --filter=@web",
-  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/web PACKAGES='src/packages/ui-web,src/packages/patternbook,src/packages/mcp-server,src/packages/patternplay' bash src/scripts/ignore-build.sh"
+  "ignoreCommand": "cd ../../../ && APP_PATH=src/apps/web PACKAGES='src/packages/ui-web,src/packages/patternbook,src/packages/mcp-server,src/packages/playground' bash src/scripts/ignore-build.sh"
 }

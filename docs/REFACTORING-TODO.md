@@ -11,7 +11,7 @@ This document outlines the refactoring steps to clean up the monorepo structure,
 - [x] Delete `/src/apps/patternbook-web` directory completely
 - [x] Remove any references to patternbook-web in workspace configuration
 - [x] Update any build scripts or CI/CD that reference patternbook-web
-- [x] **Note**: Patternbook functionality will be rendered inside shredbx-web app
+- [x] **Note**: Patternbook functionality will be rendered inside reactbook-web app
 
 ## Phase 2: Package Simplification & Renaming
 
@@ -32,15 +32,15 @@ This document outlines the refactoring steps to clean up the monorepo structure,
   - [x] Update workspace references
   - [x] Update any app dependencies
 
-### 2.2 Shredbx Package Consolidation
+### 2.2 ReactBook Package Consolidation
 
-- [x] **2.2.1**: Move content from `shredbx-core` to `shredbx-ui-web`
-  - [x] Move all source files from shredbx-core to shredbx-ui-web
+- [x] **2.2.1**: Move content from `reactbook-core` to `reactbook-ui-web`
+  - [x] Move all source files from reactbook-core to reactbook-ui-web
   - [x] Update package.json dependencies and exports
   - [x] Ensure no functionality is lost during move
-- [x] **2.2.2**: Rename `shredbx-ui-web` to `ui-web`
-  - [x] Rename directory from `shredbx-ui-web` to `ui-web`
-  - [x] Update package.json name from `@shredbx/ui-web` to `@ui-web`
+- [x] **2.2.2**: Rename `reactbook-ui-web` to `ui-web`
+  - [x] Rename directory from `reactbook-ui-web` to `ui-web`
+  - [x] Update package.json name from `@reactbook/ui-web` to `@ui-web`
   - [x] Update all import statements across the codebase
   - [x] Update workspace references
   - [x] Update any app dependencies
@@ -48,9 +48,9 @@ This document outlines the refactoring steps to clean up the monorepo structure,
 
 ### 2.3 App Renaming
 
-- [x] **2.3.1**: Rename `shredbx-web` to `web`
-  - [x] Rename directory from `shredbx-web` to `web`
-  - [x] Update package.json name from `@shredbx/web` to `@web`
+- [x] **2.3.1**: Rename `reactbook-web` to `web`
+  - [x] Rename directory from `reactbook-web` to `web`
+  - [x] Update package.json name from `@reactbook/web` to `@web`
   - [x] Update all import statements across the codebase
   - [x] Update workspace references
   - [x] Update any CI/CD or deployment configurations
@@ -92,10 +92,10 @@ This document outlines the refactoring steps to clean up the monorepo structure,
 ```
 src/
 ├── apps/
-│   └── web/                    # Single Next.js app (renamed from shredbx-web)
+│   └── web/                    # Single Next.js app (renamed from reactbook-web)
 └── packages/
     ├── patternbook/            # Patternbook functionality (renamed from patternbook-core)
-    ├── ui-web/                 # Web UI components & utilities (renamed from shredbx-ui-web)
+    ├── ui-web/                 # Web UI components & utilities (renamed from reactbook-ui-web)
     └── mcp-server/             # MCP server functionality (kept descriptive name)
 ```
 
@@ -109,5 +109,5 @@ src/
 
 ### Corrections Made
 
-- **@mcp-server** → **@shredbx/mcp-server** (kept domain prefix and descriptive name for clarity)
+- **@mcp-server** → **@reactbook/mcp-server** (kept domain prefix and descriptive name for clarity)
 - **mcp** → **mcp-server** (directory renamed back to descriptive name following best practices)

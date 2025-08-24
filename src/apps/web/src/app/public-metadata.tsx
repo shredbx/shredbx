@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { MetadataConfig } from "@ui-web";
 
 export const MetaConfig: MetadataConfig = {
-  title: "ShredBX — eXperimental Open Source Lab",
+  title: "ReactBook — eXperimental Open Source Lab",
   description:
     "Build. Break. Rebuild. Exploring web, mobile, and AI patterns – open source projects and experiments on GitHub.",
   baseUrl: "https://shredbx.com",
-  siteName: "ShredBX",
+  siteName: "ReactBook",
 };
 
 // Local generateMetadata function (server-side only)

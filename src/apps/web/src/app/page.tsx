@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ThemeSwitcher, ProjectsReferenceCatalog } from "@ui-web";
-import { PatternPlayTest } from "@/components/patternplay-test";
 
 export default function Home() {
   return (
@@ -12,13 +11,13 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/logo.png"
-              alt="ShredBX Logo"
+              alt="ReactBook Logo"
               width={32}
               height={32}
               priority
               className="w-8 h-8 rounded-lg"
             />
-            <h1 className="text-lg font-bold">shredbx</h1>
+            <h1 className="text-lg font-bold">ReactBook</h1>
           </div>
 
           {/* Right side - Theme switcher */}
@@ -27,33 +26,25 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       {/* Main content area */}
-      <main className="flex-1 flex justify-center items-center px-6 md:px-12">
-        <div className="relative flex items-center gap-12">
-          {/* Main content */}
-          <div className="text-center space-y-4 py-8">
-            <h1 className="text-4xl font-bold">shredbx</h1>
-            <p className="text-lg text-muted-foreground font-medium">
-              eXperimental Open Source Lab
-            </p>
-            <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
-              <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm text-muted-foreground">
-                coming soon...
-              </span>
-            </div>
+      <main className=" flex justify-center items-center px-6 md:px-12 mt-4">
+        {/* Main content */}
+        <div className="text-center space-y-4 py-8">
+          <h1 className="text-4xl font-bold">ReactBook</h1>
+          <p className="text-lg text-muted-foreground font-medium">
+            React / Next.js knowledgebase
+          </p>
+          <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-border/50">
+            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-sm text-muted-foreground">
+              coming soon...
+            </span>
           </div>
         </div>
       </main>
-
       {/* Footer with projects catalog */}
-      <footer className="border-t border-border/50 bg-muted/20 mt-auto">
+      <footer className="border-t border-border/50 bg-muted/20 mt-auto flex px-12">
         <ProjectsReferenceCatalog />
-
-        <div className="p-6">
-          <PatternPlayTest />
-        </div>
       </footer>
     </div>
   );

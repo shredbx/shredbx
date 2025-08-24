@@ -2,12 +2,12 @@
 
 ## What & Why
 
-This is the **main ShredBX web application**.  
-It serves as the **experimental dev lab workspace** — a control center where all ShredBX projects, demos, and knowledge bases can be explored.
+This is the **main ReactBook web application**.  
+It serves as the **experimental dev lab workspace** — a control center where all ReactBook projects, demos, and knowledge bases can be explored.
 
 ## When to Use
 
-- To browse and test all ShredBX experiments in one place
+- To browse and test all ReactBook experiments in one place
 - To connect ReactBook, PatternBook, and other packages into a single workspace
 - To prototype and run demos quickly
 
@@ -19,7 +19,7 @@ It serves as the **experimental dev lab workspace** — a control center where a
 ## How It Works
 
 - Built with **Next.js** as the frontend framework
-- Integrates ShredBX packages (ReactBook, PatternBook, MCP tools)
+- Integrates ReactBook packages (ReactBook, PatternBook, MCP tools)
 - Provides a UI to navigate, run, and combine experiments
 
 ## Examples / Use-cases

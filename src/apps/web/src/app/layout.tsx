@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider
-          storageKey="shredbx-web-theme"
+          storageKey="reactbook-web-theme"
           themes={["light", "dark"]}
           attribute="class"
           defaultTheme="dark"

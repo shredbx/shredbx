@@ -1,19 +1,19 @@
 <p align="center">
-  <img src="./logo-animated-2.gif" alt="shredbx logo" width="256"/>
+  <img src="./logo-animated-2.gif" alt="reactbook logo" width="256"/>
 </p>
 
-# ShredBX Monorepo v0.0.1
+# ReactBook Monorepo v0.0.1
 
 ## What & Why
 
-This monorepo is the **open-source workspace** for ShredBX experiments and projects.  
+This monorepo is the **open-source workspace** for ReactBook experiments and projects.  
 Its purpose is to collect, document, and evolve reusable solutions in one place, making them accessible across apps, packages, and external projects.
 
 At the core is the **PatternBook methodology**, which turns real code into discoverable, reusable knowledge for both humans and AI.
 
 ## When to Use
 
-- To explore ShredBX’s open-source experiments
+- To explore ReactBook’s open-source experiments
 - To reuse modular solutions across projects
 - To learn from documented examples and patterns
 - To contribute new patterns or improvements
@@ -41,4 +41,4 @@ At the core is the **PatternBook methodology**, which turns real code into disco
 - [PatternBook](/src/packages/patternbook/README.md)
 - [ReactBook](/src/packages/reactbook/README.md)
 - [ReactBook-Web](/src/apps/reactbook-web/README.md)
-- [ShredBX Web](/src/apps/web/README.md)
+- [ReactBook Web](/src/apps/web/README.md)

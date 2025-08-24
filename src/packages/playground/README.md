@@ -1,4 +1,4 @@
-# @patternplay
+# @playground
 
 ## What & Why
 
@@ -14,7 +14,7 @@ PatternPlay is a package for web/Next.js experiments, demos, and examples. It se
 ## Usage
 
 ```tsx
-import { patternplayGreeting, Button } from "@patternplay";
+import { patternplayGreeting, Button } from "@playground";
 
 export function MyExperiment() {
   return (

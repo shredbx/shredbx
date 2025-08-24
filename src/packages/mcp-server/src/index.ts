@@ -1,7 +1,7 @@
 // Simple FAQ text
 const FAQ_TEXT = [
   {
-    question: "Story of shredbx?",
+    question: "Story of reactbook?",
     answer:
       "It's created by Andrei Solovev to host a patternbook and other open sourced projects",
   },
@@ -12,7 +12,7 @@ const FAQ_TEXT = [
   },
   {
     question: "Where I get more info?",
-    answer: "Visit shredbx.com or visit github.com/shredbx.",
+    answer: "Visit shredbx.com or visit github.com/reactbook.",
   },
   {
     question: "What related projects it has?",

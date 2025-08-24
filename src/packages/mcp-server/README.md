@@ -1,4 +1,4 @@
-# @shredbx/mcp-server v0.1.0
+# @reactbook/mcp-server v0.1.0
 
 ## What & Why
 
@@ -42,7 +42,7 @@ import {
   getTimestamp,
   getServerInfo,
   mcpFunctions,
-} from "@shredbx/mcp-server";
+} from "@reactbook/mcp-server";
 ```
 
 Integrating with your MCP server (pseudo‑example):
@@ -98,13 +98,13 @@ server.tool("roll_dice", "Roll an N‑sided die", schema, async ({ sides }) => {
 pnpm install
 
 # build once
-pnpm --filter @shredbx/mcp-server build
+pnpm --filter @reactbook/mcp-server build
 
 # watch mode
-pnpm --filter @shredbx/mcp-server dev
+pnpm --filter @reactbook/mcp-server dev
 
 # type check
-pnpm --filter @shredbx/mcp-server type-check
+pnpm --filter @reactbook/mcp-server type-check
 ```
 
 ---

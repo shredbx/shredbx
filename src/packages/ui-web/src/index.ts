@@ -2,5 +2,5 @@
 export * from "./components";
 export * from "./lib";
 
-// Export core types (moved from shredbx-core)
+// Export core types (moved from reactbook-core)
 export * from "./types-core";

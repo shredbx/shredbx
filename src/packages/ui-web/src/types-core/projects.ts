@@ -20,9 +20,8 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     id: "shredbx",
     name: "ShredBX",
     url: "https://shredbx.com",
-    github: "https://github.com/shredbx/shredbx",
     description:
-      "ShredBX — eXperimental Open Source Lab Monorepo — a living workspace for reusable patterns, tools, and projects",
+      "ShredBX — eXperimental Lab — a living workspace for reusable patterns, tools, and projects",
     logoPath: "https://shredbx.com/references/logo-shredbx.png",
     logoGifPath: "https://shredbx.com/references/logo-shredbx-animated.gif",
   },
@@ -31,7 +30,7 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
     name: "ReactBook",
     url: "https://reactbook.shredbx.com",
     github:
-      "https://github.com/shredbx/shredbx/tree/main/src/apps/reactbook-web",
+      "https://github.com/shredbx/reactbook/tree/main/src/apps/reactbook-web",
     description:
       "Interactive playground for React experiments, demos, and component patterns",
     logoPath: "https://shredbx.com/references/logo-reactbook.png",
@@ -40,9 +39,9 @@ export const PROJECTS: Record<ProjectType, ProjectInfo> = {
   patternbook: {
     id: "patternbook",
     name: "PatternBook",
-    url: "https://github.com/shredbx/shredbx/tree/main/src/packages/patternbook",
+    url: "https://github.com/shredbx/reactbook/tree/main/src/packages/patternbook",
     github:
-      "https://github.com/shredbx/shredbx/tree/main/src/packages/patternbook",
+      "https://github.com/shredbx/reactbook/tree/main/src/packages/patternbook",
     description:
       "Catalog of proven solutions — capture once, reuse everywhere. A recipe book for code and workflows",
     logoPath: "https://shredbx.com/references/logo-patternbook.png",

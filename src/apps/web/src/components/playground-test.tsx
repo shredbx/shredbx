@@ -1,6 +1,6 @@
-import { patternplayGreeting, Button } from "@patternplay";
+import { patternplayGreeting, Button } from "@playground";
 
-export function PatternPlayTest() {
+export function PlaygroundTest() {
   return (
     <div className="p-4 border rounded-lg bg-gray-50">
       <h2 className="text-lg font-semibold mb-2">PatternPlay Test</h2>

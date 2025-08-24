@@ -71,22 +71,22 @@ packages/package-name/
 ```
 src/
 ├── apps/
-│   └── web/                    # Single Next.js app (renamed from shredbx-web)
+│   └── web/                    # Single Next.js app (renamed from reactbook-web)
 └── packages/
     ├── patternbook/            # PatternBook functionality (renamed from patternbook-core)
-    ├── ui-web/                 # Web UI components & utilities (renamed from shredbx-ui-web)
-    ├── patternplay/            # Web/Next.js experiments, demos, and examples
-    └── mcp-server/             # MCP server functionality (kept @shredbx/mcp-server)
+    ├── ui-web/                 # Web UI components & utilities (renamed from reactbook-ui-web)
+    ├── playground/            # Web/Next.js experiments, demos, and examples
+    └── mcp-server/             # MCP server functionality (kept @reactbook/mcp-server)
 ```
 
 **Key Changes Completed:**
 
 - ✅ **patternbook-core** → **patternbook** (no suffix)
-- ✅ **shredbx-ui-web** → **ui-web** (standard naming)
-- ✅ **shredbx-web** → **web** (simplified app name)
+- ✅ **reactbook-ui-web** → **ui-web** (standard naming)
+- ✅ **reactbook-web** → **web** (simplified app name)
 - ✅ **patternbook-ui-web** → **deleted** (merged into patternbook)
-- ✅ **shredbx-core** → **deleted** (merged into ui-web)
-- ✅ **@shredbx/mcp-server** → **@shredbx/mcp-server** (kept domain prefix and descriptive name)
+- ✅ **reactbook-core** → **deleted** (merged into ui-web)
+- ✅ **@reactbook/mcp-server** → **@reactbook/mcp-server** (kept domain prefix and descriptive name)
 
 ### Package.json Template:
 

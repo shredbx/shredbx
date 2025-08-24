@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SVG Color Removal Script for ShredBX Logo
+SVG Color Removal Script for ReactBook Logo
 
 This script removes colors from SVG files and converts embedded images to vector paths.
 It creates a clean, colorless version suitable for dynamic styling.

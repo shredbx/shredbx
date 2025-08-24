@@ -2,6 +2,6 @@
   "version": 2,
   "framework": "nextjs",
   "installCommand": "cd ../../../ && pnpm install",
-  "buildCommand": "cd ../../../ && turbo build --filter=@reactbook-web",
-  "devCommand": "cd ../../../ && turbo dev --filter=@reactbook-web"
+  "buildCommand": "cd ../../../ && turbo build --filter=@reactbook/reactbook-web",
+  "devCommand": "cd ../../../ && turbo dev --filter=@reactbook/reactbook-web"
 }

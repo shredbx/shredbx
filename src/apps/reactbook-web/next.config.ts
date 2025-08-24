@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@ui-web"],
+  transpilePackages: ["@reactbook/ui-web"],
   turbopack: {
     root: "../../..",
   },

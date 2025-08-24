@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ThemeSwitcher, ProjectsReferenceCatalog } from "@ui-web";
+import { ThemeSwitcher, ProjectsReferenceCatalog } from "@reactbook/ui-web";
 import { typesPlaceholder } from "@reactbook/playground/patternbook";
 
 // import { PlaygroundTest } from "@/components/playground-test";

@@ -40,7 +40,7 @@ This document outlines the refactoring steps to clean up the monorepo structure,
   - [x] Ensure no functionality is lost during move
 - [x] **2.2.2**: Rename `reactbook-ui-web` to `ui-web`
   - [x] Rename directory from `reactbook-ui-web` to `ui-web`
-  - [x] Update package.json name from `@reactbook/ui-web` to `@ui-web`
+  - [x] Update package.json name from `@reactbook/ui-web` to `@reactbook/ui-web`
   - [x] Update all import statements across the codebase
   - [x] Update workspace references
   - [x] Update any app dependencies

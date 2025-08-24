@@ -9,7 +9,7 @@ It provides a space to test UI components, validate new patterns, and build inte
 
 ## Features
 
-- **UI Component Testing** – Experiment with components from `@ui-web`
+- **UI Component Testing** – Experiment with components from `@reactbook/ui-web`
 - **Pattern Validation** – Try out new design and state-management patterns
 - **Demo Creation** – Build interactive examples and prototypes
 - **Rapid Iteration** – Test ideas quickly in isolation
@@ -50,7 +50,7 @@ pnpm type-check
 
 ## Dependencies
 
-- `@ui-web` – shared UI components
+- `@reactbook/ui-web` – shared UI components
 - React 19
 - TypeScript
 

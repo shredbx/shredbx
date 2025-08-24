@@ -1,4 +1,4 @@
-import { Checkbox } from "@ui-web";
+import { Checkbox } from "@reactbook/ui-web";
 
 export function TutorialStep({
   title,

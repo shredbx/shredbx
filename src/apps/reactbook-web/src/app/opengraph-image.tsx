@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { createOpenGraphImageJSX } from "@ui-web";
+import { createOpenGraphImageJSX } from "@reactbook/ui-web";
 import { MetaConfig } from "./public-metadata";
 
 export const alt = MetaConfig.title;

@@ -27,7 +27,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@ui-web": "workspace:*"
+    "@reactbook/ui-web": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19",

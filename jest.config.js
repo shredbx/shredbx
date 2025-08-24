@@ -7,7 +7,7 @@ module.exports = {
   ],
   moduleNameMapping: {
     "^@/(.*)$": "<rootDir>/src/$1",
-    "^@ui-web/(.*)$": "<rootDir>/src/packages/ui-web/src",
+    "^@reactbook/ui-web/(.*)$": "<rootDir>/src/packages/ui-web/src",
     "^@patternbook/(.*)$": "<rootDir>/src/packages/patternbook-$1/src",
   },
   transform: {

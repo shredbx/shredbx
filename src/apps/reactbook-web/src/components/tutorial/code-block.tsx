@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@ui-web";
+import { Button } from "@reactbook/ui-web";
 
 const CopyIcon = () => (
   <svg

@@ -31,7 +31,7 @@ This structure keeps builds fast, dependencies clear, and code organized — pre
 
 ```
 @patternbook             # PatternBook core functionality (no -core suffix)
-@ui-web                  # Web UI components & utilities (standard naming)
+@reactbook/ui-web                  # Web UI components & utilities (standard naming)
 @web                     # Main Next.js web application
 @mobile                  # React Native mobile application (future)
 ```
@@ -116,10 +116,10 @@ src/
 
 ```bash
 # From monorepo root
-pnpm --filter @web add @ui-web
+pnpm --filter @web add @reactbook/ui-web
 
 # From app directory
-cd src/apps/web && pnpm add @ui-web
+cd src/apps/web && pnpm add @reactbook/ui-web
 ```
 
 ### Add external package to specific app:
@@ -224,7 +224,7 @@ pnpm --filter @web add @shared-web
 # Add 'packages/ui-web' to PACKAGES list
 
 # Import in code
-import { Button } from '@ui-web'
+import { Button } from '@reactbook/ui-web'
 ```
 
 ---

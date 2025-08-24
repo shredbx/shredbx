@@ -2,4 +2,4 @@
 export const patternplayGreeting = "Welcome to PatternPlay! 🎨✨";
 
 // Export UI components from ui-web for use in experiments
-export * from "@ui-web";
+export * from "@reactbook/ui-web";

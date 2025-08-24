@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@ui-web";
+import { Button } from "@reactbook/ui-web";
 import { createClient } from "@/lib/supabase/server";
 import { LogoutButton } from "./logout-button";
 

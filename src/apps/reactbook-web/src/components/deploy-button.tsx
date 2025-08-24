@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@ui-web";
+import { Button } from "@reactbook/ui-web";
 
 export function DeployButton() {
   return (

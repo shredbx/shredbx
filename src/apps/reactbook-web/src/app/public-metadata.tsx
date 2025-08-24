@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { MetadataConfig } from "@ui-web";
+import { MetadataConfig } from "@reactbook/ui-web";
 
 export const MetaConfig: MetadataConfig = {
   title: "ReactBook — eXperimental Open Source Lab",

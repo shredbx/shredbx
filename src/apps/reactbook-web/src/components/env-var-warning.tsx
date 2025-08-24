@@ -1,4 +1,4 @@
-import { Badge, Button } from "@ui-web";
+import { Badge, Button } from "@reactbook/ui-web";
 
 export function EnvVarWarning() {
   return (

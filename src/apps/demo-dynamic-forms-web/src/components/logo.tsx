@@ -9,6 +9,7 @@ export const Logo = () => {
         alt="Logo"
         width={48}
         height={48}
+        unoptimized
         className="rounded-sm object-contain"
         priority
       />

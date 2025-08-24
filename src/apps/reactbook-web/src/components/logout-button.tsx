@@ -1,7 +1,7 @@
 "use client";
 
 import { createClient } from "@/lib/supabase/client";
-import { Button } from "@ui-web";
+import { Button } from "@reactbook/ui-web";
 import { useRouter } from "next/navigation";
 
 export function LogoutButton() {

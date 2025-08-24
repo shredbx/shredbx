@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@ui-web";
+import { cn } from "@reactbook/ui-web";
 import { createClient } from "@/lib/supabase/client";
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   CardTitle,
   Input,
   Label,
-} from "@ui-web";
+} from "@reactbook/ui-web";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

@@ -3,6 +3,8 @@
 # dependencies
 
 # Build outputs
+.vercel
+.env*.local
 dist/
 **/dist/
 build/

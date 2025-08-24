@@ -7,7 +7,7 @@
     "dev": "turbo dev",
     "dev:all": "turbo dev --parallel",
     "dev:web": "turbo dev --filter=@web",
-    "dev:playground": "turbo dev --filter=@playground",
+    "dev:playground": "turbo dev --filter=@reactbook/playground",
     "dev:mcp-server": "turbo dev --filter=@reactbook/mcp-server",
     "test": "turbo test",
     "test:watch": "turbo test --watch",

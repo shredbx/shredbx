@@ -1,31 +1,28 @@
 {
+  "extends": "./configs/typescript-config/tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "composite": true,
-    "baseUrl": ".",
     "paths": {
-      "@reactbook/ui-web/*": ["src/packages/ui-web/src"],
-      "@patternbook/*": ["src/packages/patternbook-*/src"]
+      "@reactbook/ui-web/*": ["src/packages/ui-web/src/*"],
+      "@reactbook/playground/*": ["src/packages/playground/src/*"],
+      "@reactbook/shared-deps": ["configs/shared-deps"],
+      "@reactbook/shared-ui-deps": ["configs/shared-ui-deps"],
+      "@reactbook/typescript-config/*": ["configs/typescript-config/*"],
+      "@reactbook/eslint-config": ["configs/eslint-config"]
     }
   },
   "references": [
+    { "path": "./configs/shared-deps" },
+    { "path": "./configs/shared-ui-deps" },
+    { "path": "./configs/typescript-config" },
+    { "path": "./configs/eslint-config" },
     { "path": "./src/packages/ui-web" },
-    { "path": "./src/packages/playground" }
+    { "path": "./src/packages/playground" },
+    { "path": "./src/apps/reactbook-web" },
+    { "path": "./src/apps/demo-dynamic-forms-web" }
   ],
-  "include": ["src/packages/*/src/**/*", "src/apps/*/src/**/*"],
-  "exclude": ["node_modules", "dist", ".next"]
+  "include": [
+    "src/packages/*/src/**/*",
+    "src/apps/*/src/**/*",
+    "configs/*/**/*"
+  ]
 }

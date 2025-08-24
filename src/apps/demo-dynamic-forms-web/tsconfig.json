@@ -19,10 +19,9 @@
       }
     ],
     "paths": {
-      "@cms-data/*": ["./src/packages/cms-data/*"],
-      "@cms/*": ["./src/packages/cms/*"],
-      "@shared-ui/*": ["./src/packages/shared-ui/*"],
-
+      "@cms-data/*": ["../../packages/cms-data/*"],
+      "@cms/*": ["../../packages/cms/*"],
+      "@shared-ui/*": ["../../packages/shared-ui/*"],
       "@/*": ["./src/*"]
     }
   },

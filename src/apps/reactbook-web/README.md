@@ -3,7 +3,7 @@
 ## What & Why
 
 This is the **main ReactBook web application**.  
-It serves as the **experimental dev lab workspace** — a control center where all ReactBook projects, demos, and knowledge bases can be explored.
+It serves as the **experimental lab workspace** — a control center where all ReactBook projects, demos, and knowledge bases can be explored.
 
 ## When to Use
 

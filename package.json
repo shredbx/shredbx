@@ -11,6 +11,11 @@
     "test:coverage": "turbo test --coverage",
     "type-check": "turbo type-check"
   },
+  "resolutions": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "next": "^15.5.0"
+  },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",

@@ -5,6 +5,7 @@
   "description": "Shared TypeScript configurations for Reactbook monorepo",
   "files": [
     "tsconfig.base.json",
-    "tsconfig.nextjs.json"
+    "tsconfig.nextjs.json",
+    "tsconfig.package.json"
   ]
 }

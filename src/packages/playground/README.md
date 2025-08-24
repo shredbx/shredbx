@@ -1,36 +1,37 @@
-# @playground
+# @reactbook/playground
 
-## What & Why
+## Overview
 
-PatternPlay is a package for web/Next.js experiments, demos, and examples. It serves as a playground for testing UI components, patterns, and workflows before they're integrated into production applications.
+The Playground is an **experimental package** for ReactBook.  
+It provides a space to test UI components, validate new patterns, and build interactive demos before integrating them into production apps.
+
+---
 
 ## Features
 
-- **UI Component Testing** - Experiment with components from @ui-web
-- **Pattern Validation** - Test new patterns and workflows
-- **Demo Creation** - Build interactive examples
-- **Rapid Prototyping** - Quick iteration on ideas
+- **UI Component Testing** – Experiment with components from `@ui-web`
+- **Pattern Validation** – Try out new design and state-management patterns
+- **Demo Creation** – Build interactive examples and prototypes
+- **Rapid Iteration** – Test ideas quickly in isolation
+
+---
 
 ## Usage
 
 ```tsx
-import { patternplayGreeting, Button } from "@playground";
+import { patternplayGreeting, Button } from "@reactbook/playground";
 
 export function MyExperiment() {
   return (
     <div>
       <h1>{patternplayGreeting}</h1>
-      <Button>Test Button</Button>
+      <Button>Click Me</Button>
     </div>
   );
 }
 ```
 
-## Dependencies
-
-- `@ui-web` - UI components and utilities for experiments
-- React 19 - For component development
-- TypeScript - For type safety
+---
 
 ## Development
 
@@ -43,4 +44,23 @@ pnpm dev
 
 # Type check
 pnpm type-check
+```
+
+---
+
+## Dependencies
+
+- `@ui-web` – shared UI components
+- React 19
+- TypeScript
+
+---
+
+## Folder Structure
+
+```
+src/
+├── index.ts             # Main exports (UI playground)
+└── mcp/
+    └── server/          # MCP server (see its own README)
 ```
